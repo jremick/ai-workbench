@@ -31,7 +31,7 @@ codex exec --ephemeral --json -C "$PWD" -s read-only -o output.txt -
 Claude Code CLI:
 
 ```bash
-claude --bare -p "prompt" --output-format json --no-session-persistence --permission-mode plan
+claude -p "prompt" --output-format json --no-session-persistence --permission-mode plan
 ```
 
 Antigravity CLI:
@@ -46,7 +46,7 @@ Grok Build CLI:
 grok --no-auto-update --prompt-file prompt.md --output-format json --permission-mode plan --no-subagents --no-memory --cwd "$PWD"
 ```
 
-Pin models in config only when the target environment has verified that the model aliases are available. Public sample configs prefer CLI defaults for local routes.
+Pin models in config only when the target environment has verified that the model aliases are available. Use Claude Code `bare: true` only when the API-key path is configured for that environment.
 
 ## xAI Notes
 

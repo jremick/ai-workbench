@@ -26,6 +26,7 @@
       "adapter": "claude_code",
       "model": "opus",
       "effort": "xhigh",
+      "bare": false,
       "permission_mode": "plan",
       "max_budget_usd": 10,
       "focus": "Evaluate evidence, source quality, benchmark design, and falsifiable claims."

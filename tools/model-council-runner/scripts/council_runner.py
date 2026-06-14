@@ -134,17 +134,20 @@ def command_for_entry(entry: dict[str, Any], prompt_text: str | None = None) -> 
     if adapter == "claude_code":
         if prompt_text is None:
             prompt_text = Path(prompt_path).read_text(encoding="utf-8")
-        command = [
-            "claude",
-            "--bare",
-            "-p",
-            prompt_text,
-            "--output-format",
-            "json",
-            "--no-session-persistence",
-            "--permission-mode",
-            route.get("permission_mode", "plan"),
-        ]
+        command = ["claude"]
+        if route.get("bare", True):
+            command.append("--bare")
+        command.extend(
+            [
+                "-p",
+                prompt_text,
+                "--output-format",
+                "json",
+                "--no-session-persistence",
+                "--permission-mode",
+                route.get("permission_mode", "plan"),
+            ]
+        )
         if model:
             command.extend(["--model", str(model)])
         if route.get("effort"):
