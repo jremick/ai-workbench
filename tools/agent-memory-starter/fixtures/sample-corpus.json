@@ -1,0 +1,106 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-06-04",
+  "sources": [
+    {
+      "source_system": "example-docs",
+      "source_uri": "example://release-readiness-notes",
+      "source_ref": "Fictional release readiness notes"
+    },
+    {
+      "source_system": "example-docs",
+      "source_uri": "example://assistant-operations-guide",
+      "source_ref": "Fictional assistant operations guide"
+    }
+  ],
+  "pages": [
+    {
+      "slug": "systems/release-gates",
+      "title": "Release Gates",
+      "page_type": "system",
+      "scope": "shared",
+      "sensitivity": "public",
+      "summary": "How agents should prove an artifact is ready before publication.",
+      "compiled_truth": "Release gates require a source review, fixture check, privacy scan, deterministic validation, and a clear statement of any skipped verification. Agents should not mark artifacts ready when tests fail or when source material has not been sanitized.",
+      "tags": ["release", "validation", "privacy"],
+      "timeline": [
+        {
+          "occurred_at": "2026-01-15T00:00:00Z",
+          "event_text": "The team added a required privacy scan before any public artifact can be published."
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_type": "compiled_truth",
+          "content": "Public artifact readiness depends on source review, fake fixtures, privacy scanning, deterministic validation, and explicit skipped-check disclosure."
+        }
+      ]
+    },
+    {
+      "slug": "workflows/memory-update-review",
+      "title": "Memory Update Review",
+      "page_type": "workflow",
+      "scope": "shared",
+      "sensitivity": "public",
+      "summary": "How agents propose durable memory updates without silently rewriting source truth.",
+      "compiled_truth": "Agents should search existing pages first, identify the target slug, classify sensitivity, include source evidence, and create a proposal. A reviewer or trusted workflow can then promote the proposal into compiled truth, timeline entries, and searchable chunks.",
+      "tags": ["memory", "proposal", "review"],
+      "timeline": [
+        {
+          "occurred_at": "2026-02-04T00:00:00Z",
+          "event_text": "The direct-write path was replaced with reviewable memory proposals for durable changes."
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_type": "compiled_truth",
+          "content": "Durable memory updates should start as proposals with target slug, sensitivity, source evidence, and reason before compiled truth changes."
+        }
+      ]
+    },
+    {
+      "slug": "preferences/secret-handling",
+      "title": "Secret Handling",
+      "page_type": "preference",
+      "scope": "shared",
+      "sensitivity": "public",
+      "summary": "Safe handling rules for tokens and credentials in agent workflows.",
+      "compiled_truth": "Agents must never print, log, commit, or store secret values in public artifacts. Runtime secrets should come from environment variables, deployment secrets, or an approved secure store. Documentation should use placeholder values only.",
+      "tags": ["security", "auth", "secrets"],
+      "timeline": [
+        {
+          "occurred_at": "2026-02-20T00:00:00Z",
+          "event_text": "The starter kit adopted placeholder-only secret documentation for public examples."
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_type": "compiled_truth",
+          "content": "Secret handling requires placeholder documentation, runtime environment variables, deployment secrets, and no committed credential values."
+        }
+      ]
+    },
+    {
+      "slug": "systems/search-quality-evals",
+      "title": "Search Quality Evals",
+      "page_type": "system",
+      "scope": "shared",
+      "sensitivity": "public",
+      "summary": "How retrieval quality is checked before memory is trusted.",
+      "compiled_truth": "Search evals should include exact-name queries, paraphrased questions, expected top pages, and failure output that shows ranking mistakes. The fixture eval should run without live API keys so it can be used in CI.",
+      "tags": ["evals", "retrieval", "quality"],
+      "timeline": [
+        {
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "event_text": "The memory workflow added a no-secret fixture eval for retrieval ranking."
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_type": "compiled_truth",
+          "content": "Retrieval evals need exact and paraphrased queries, expected top pages, ranking output, and no live secrets."
+        }
+      ]
+    }
+  ]
+}

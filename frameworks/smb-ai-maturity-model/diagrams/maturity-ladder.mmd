@@ -1,0 +1,28 @@
+graph LR
+  L1["1. Exploring<br/>Ad hoc use"]
+  L2["2. Assisted<br/>Routine human-reviewed use"]
+  L3["3. Embedded<br/>Documented AI-assisted workflows"]
+  L4["4. Orchestrated<br/>Connected workflows with gates"]
+  L5["5. AI-native<br/>Selected AI-first operations"]
+
+  L1 --> L2 --> L3 --> L4 --> L5
+
+  C1["Core question:<br/>What is real evidence?"]
+  C2["Binding constraint:<br/>Which dimension or spine blocks the next level?"]
+  C3["Next move:<br/>What small change raises that constraint?"]
+  S1["Spine:<br/>People & accountability"]
+  S2["Spine:<br/>Governance & evidence"]
+  T1["Transformation:<br/>AI working skill"]
+  T2["Transformation:<br/>Work design depth"]
+  T3["Transformation:<br/>Reliable operations"]
+  T4["Transformation:<br/>Organizational adaptability"]
+
+  C1 -.-> L2
+  C2 -.-> L3
+  C3 -.-> L4
+  S1 -.-> L3
+  S2 -.-> L4
+  T1 -.-> L2
+  T2 -.-> L3
+  T3 -.-> L4
+  T4 -.-> L5

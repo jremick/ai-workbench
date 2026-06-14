@@ -1,0 +1,9 @@
+graph TD
+  Plan["Parent defines packets<br/>and output schema"] --> A["Agent A<br/>Packet 1"]
+  Plan --> B["Agent B<br/>Packet 2"]
+  Plan --> C["Agent C<br/>Packet 3"]
+  A --> Barrier["Barrier<br/>wait for all outputs"]
+  B --> Barrier
+  C --> Barrier
+  Barrier --> Synthesize["Synthesize<br/>merge, dedupe, reconcile"]
+  Synthesize --> Final["Single deliverable"]

@@ -1,0 +1,6 @@
+graph TD
+  Brief["Brief and rubric"] --> Generate["Generate candidates"]
+  Generate --> Dedupe["Dedupe and cluster"]
+  Dedupe --> Score["Score against rubric"]
+  Score --> Test["Test or verify survivors"]
+  Test --> Select["Select final set"]

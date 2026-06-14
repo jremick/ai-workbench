@@ -1,0 +1,14 @@
+flowchart TD
+  Question["Research question<br/>decision context and scope"] --> Recency{"Current-state claim?"}
+  Recency -->|Yes| LiveSources["Verify current sources<br/>official docs, APIs, releases, datasets"]
+  Recency -->|No| StableSources["Use stable sources<br/>papers, specs, code, archived docs"]
+  LiveSources --> Extract
+  StableSources --> Extract
+  Extract["Extract evidence<br/>source, date, claim, caveat"] --> Conflict{"Conflicts or hard synthesis?"}
+  Conflict -->|No| DirectSynthesis["Research synthesis<br/>findings, implications, confidence"]
+  Conflict -->|Yes| EvidencePacket["Evidence packet<br/>same facts for every council worker"]
+  EvidencePacket --> CouncilPlan["model-council plan<br/>roles, prompts, route config"]
+  CouncilPlan --> CouncilWorkers["Independent council workers<br/>structural, empirical, contrarian, optional domain"]
+  CouncilWorkers --> CouncilSynth["Council synthesis<br/>accepted claims, rejected claims, gaps"]
+  CouncilSynth --> DirectSynthesis
+  DirectSynthesis --> FinalChecks["Final checks<br/>citation coverage, date clarity, unresolved gaps"]

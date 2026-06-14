@@ -1,0 +1,21 @@
+{
+  "skill_name": "harness-composer",
+  "version": "1.0.0-public",
+  "cases": [
+    {
+      "id": "public-skill-pack",
+      "prompt": "Compose a harness for publishing four related AI workflow skills. They should share a theme but each needs its own README, eval examples, and validation path.",
+      "expected_output": "The output should define a parent publication harness, four child harnesses with distinct purposes, integration gates, public-safety checks, and a first execution path."
+    },
+    {
+      "id": "research-plus-prototype",
+      "prompt": "I want to research a new agent memory approach, prototype it, test retrieval quality, and decide whether to publish it. Break this into nested harnesses.",
+      "expected_output": "The output should separate research, prototype, eval, and publication packaging child harnesses, with dependency order and proof for each."
+    },
+    {
+      "id": "too-small-to-split",
+      "prompt": "I need to add one missing README section to an existing skill. Should this be a nested harness?",
+      "expected_output": "The output should say a nested harness is overkill, keep the work as a direct edit, and still name a small verification check."
+    }
+  ]
+}

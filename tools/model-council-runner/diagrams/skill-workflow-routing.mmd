@@ -1,0 +1,26 @@
+flowchart TD
+  Request["User task or benchmark item"] --> Scope{"What does the task need?"}
+  Scope -->|Current facts or sources| DeepSkill["deep-research skill"]
+  Scope -->|Independent model judgment| CouncilSkill["model-council skill"]
+  Scope -->|Repeatable evaluation| BenchmarkHarness["External benchmark harness"]
+
+  DeepSkill --> SourcePlan["Define source plan<br/>primary sources, dates, scope"]
+  SourcePlan --> Evidence["Extract evidence packet<br/>claims, conflicts, uncertainty"]
+  Evidence --> Escalate{"Need independent synthesis?"}
+  Escalate -->|No| ResearchAnswer["Research synthesis<br/>findings, implications, gaps"]
+  Escalate -->|Yes| CouncilBrief["Council task packet<br/>same evidence for every worker"]
+
+  CouncilSkill --> CouncilBrief
+  BenchmarkHarness --> BenchPrep["Prepare sample<br/>generation tasks and scoring material"]
+  BenchPrep --> CouncilBrief
+
+  CouncilBrief --> RunnerPlan["Runner plan<br/>validate config, render prompts, write manifest"]
+  RunnerPlan --> Approval{"Execute model calls?"}
+  Approval -->|No| Planned["Review prompts and route plan<br/>prompts, commands, manifest"]
+  Planned --> Revise["Revise task packet, roles, routes, or sample"]
+  Revise --> RunnerPlan
+  Approval -->|Yes| Fanout["Fan out council workers"]
+  Fanout --> WorkerOutputs["Structured worker outputs<br/>claims, evidence, uncertainty, failure modes"]
+  WorkerOutputs --> Synth["Return to synthesizer<br/>consensus, disagreement, accepted claims, gaps"]
+  Synth --> Final["Final answer or benchmark output<br/>with disagreements and gaps"]
+  ResearchAnswer --> Final

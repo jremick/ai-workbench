@@ -1,0 +1,9 @@
+graph LR
+  Input["Input item"] --> Classifier["Classifier"]
+  Classifier -->|Bug| Bug["Bug workflow"]
+  Classifier -->|Question| Answer["Answer workflow"]
+  Classifier -->|Risk| Escalate["Human review"]
+  Bug --> Normalize["Normalize output"]
+  Answer --> Normalize
+  Escalate --> Normalize
+  Normalize --> Final["Final response or action"]

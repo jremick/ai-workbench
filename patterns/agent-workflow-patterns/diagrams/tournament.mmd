@@ -1,0 +1,12 @@
+graph TD
+  Brief["Same task brief"] --> A["Agent A<br/>Approach 1"]
+  Brief --> B["Agent B<br/>Approach 2"]
+  Brief --> C["Agent C<br/>Approach 3"]
+  Brief --> D["Agent D<br/>Approach 4"]
+  A --> J1["Judge<br/>A vs B"]
+  B --> J1
+  C --> J2["Judge<br/>C vs D"]
+  D --> J2
+  J1 --> FinalJudge["Final judge"]
+  J2 --> FinalJudge
+  FinalJudge --> Winner["Winner or top set"]

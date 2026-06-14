@@ -1,0 +1,21 @@
+{
+  "skill_name": "verification-harness-router",
+  "version": "1.0.0-public",
+  "cases": [
+    {
+      "id": "public-skill-ready",
+      "prompt": "What checks prove this new skill package is public-ready?",
+      "expected_output": "The output should include README/SKILL review, eval examples, validator or secret scan, license/public-safety checks, and residual risk."
+    },
+    {
+      "id": "ui-claim",
+      "prompt": "The agent says the dashboard layout works on mobile and desktop. What verification route should it use?",
+      "expected_output": "The output should include browser checks or screenshots across viewports, interaction checks if relevant, and should not rely on code review alone."
+    },
+    {
+      "id": "sidecar-review",
+      "prompt": "A different model said the plan is good. Is that enough proof?",
+      "expected_output": "The output should say model critique is useful but insufficient alone, then route to deterministic checks or user review based on the claim."
+    }
+  ]
+}

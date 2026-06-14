@@ -1,0 +1,27 @@
+{
+  "name": "agent-memory-starter search quality",
+  "version": "1.0.0",
+  "last_updated": "2026-06-04",
+  "cases": [
+    {
+      "id": "release-readiness",
+      "query": "What checks prove a public artifact is ready to publish?",
+      "expected_top_slug": "systems/release-gates"
+    },
+    {
+      "id": "proposal-before-write",
+      "query": "How should an agent update durable memory without silently changing truth?",
+      "expected_top_slug": "workflows/memory-update-review"
+    },
+    {
+      "id": "credential-boundary",
+      "query": "What should docs say about tokens and credential values?",
+      "expected_top_slug": "preferences/secret-handling"
+    },
+    {
+      "id": "retrieval-regression",
+      "query": "How do we test whether memory search ranking still works?",
+      "expected_top_slug": "systems/search-quality-evals"
+    }
+  ]
+}

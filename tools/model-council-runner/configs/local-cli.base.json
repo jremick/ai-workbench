@@ -1,0 +1,54 @@
+{
+  "schema_version": "model-council-runner/v1",
+  "name": "base-local-cli-council",
+  "run_mode": "local-cli",
+  "council_level": "base",
+  "execution": {
+    "parallel_workers": true,
+    "timeout_seconds": 1800,
+    "temperature": 0
+  },
+  "roles": [
+    {
+      "id": "structural",
+      "label": "Structural Analyst",
+      "provider": "openai",
+      "adapter": "codex_exec",
+      "model": "gpt-5.5",
+      "reasoning_effort": "xhigh",
+      "sandbox": "read-only",
+      "focus": "Map the problem, constraints, assumptions, and decision frame."
+    },
+    {
+      "id": "empirical",
+      "label": "Empirical Analyst",
+      "provider": "anthropic",
+      "adapter": "claude_code",
+      "model": "opus",
+      "effort": "xhigh",
+      "permission_mode": "plan",
+      "max_budget_usd": 10,
+      "focus": "Evaluate evidence, source quality, benchmark design, and falsifiable claims."
+    },
+    {
+      "id": "contrarian",
+      "label": "Contrarian Analyst",
+      "provider": "google",
+      "adapter": "antigravity_cli",
+      "model": "Gemini 3.1 Pro (High)",
+      "timeout": "20m",
+      "sandbox": true,
+      "focus": "Find failure modes, alternate explanations, and weak assumptions."
+    }
+  ],
+  "synthesizer": {
+    "id": "synthesizer",
+    "label": "Council Synthesizer",
+    "provider": "openai",
+    "adapter": "codex_exec",
+    "model": "gpt-5.5",
+    "reasoning_effort": "xhigh",
+    "sandbox": "read-only",
+    "focus": "Synthesize worker outputs into a decision-ready answer with disagreement preserved."
+  }
+}

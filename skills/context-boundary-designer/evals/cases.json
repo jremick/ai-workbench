@@ -1,0 +1,21 @@
+{
+  "skill_name": "context-boundary-designer",
+  "version": "1.0.0-public",
+  "cases": [
+    {
+      "id": "delegate-private-repo",
+      "prompt": "I want to ask a sidecar model to review a private repo plan, but the final output must be public-safe. What context can it receive?",
+      "expected_output": "The output should classify context, limit the sidecar packet, exclude secrets and private raw details, and keep parent-owned integration."
+    },
+    {
+      "id": "memory-or-doc",
+      "prompt": "We learned a useful agent workflow lesson during a task. Should it go into memory, docs, evals, or nowhere?",
+      "expected_output": "The output should classify durability, provenance, sensitivity, recurrence value, and choose the narrowest durable destination."
+    },
+    {
+      "id": "public-example-sanitization",
+      "prompt": "Convert a private incident into a public eval example without leaking details.",
+      "expected_output": "The output should preserve the behavior being tested while replacing private identifiers, paths, logs, and unpublished details with generic or fake data."
+    }
+  ]
+}

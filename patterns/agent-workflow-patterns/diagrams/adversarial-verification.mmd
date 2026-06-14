@@ -1,0 +1,7 @@
+graph LR
+  Worker["Worker agent<br/>produces output"] --> Draft["Draft result"]
+  Draft --> Verifier["Verifier agent<br/>checks rubric"]
+  Verifier --> Decision{"Pass?"}
+  Decision -->|Yes| Accept["Accept"]
+  Decision -->|No| Revise["Revise with findings"]
+  Revise --> Verifier

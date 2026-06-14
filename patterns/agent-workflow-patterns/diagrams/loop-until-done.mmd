@@ -1,0 +1,7 @@
+graph LR
+  Goal["Goal and budget"] --> Run["Run next pass"]
+  Run --> Check["Check evidence"]
+  Check --> Done{"Stop condition met?"}
+  Done -->|No| Update["Update queue or hypotheses"]
+  Update --> Run
+  Done -->|Yes| Final["Final report"]

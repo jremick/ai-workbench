@@ -1,0 +1,12 @@
+flowchart TD
+  Task["Claim, plan, or answer to stress-test"] --> Base["Run base council<br/>frame, evidence, contradictions"]
+  Base --> Draft["Draft synthesis<br/>claims and confidence"]
+  Draft --> FailureModes["Failure-mode generation<br/>ways the answer could break"]
+  FailureModes --> TestDesign["Test design<br/>counterexamples, edge cases, probes"]
+  TestDesign --> CheckRoute{"Can checks run now?"}
+  CheckRoute -->|Yes| RunChecks["Run deterministic or manual checks"]
+  CheckRoute -->|No| CheckPlan["Record recommended checks<br/>owners, data, stop conditions"]
+  RunChecks --> Findings["Stress-test findings<br/>passed, failed, unknown"]
+  CheckPlan --> Findings
+  Findings --> Update["Update synthesis<br/>downgrade, qualify, or reject claims"]
+  Update --> Final["Final answer<br/>with stress-test evidence and remaining risk"]

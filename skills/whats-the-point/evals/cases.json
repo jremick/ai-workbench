@@ -1,0 +1,21 @@
+{
+  "skill_name": "whats-the-point",
+  "version": "1.1.0-public",
+  "cases": [
+    {
+      "id": "unsupported-savings-claim",
+      "prompt": "Distill this vendor proposal: The vendor claims a workflow assistant will save 40% of analyst time within six months. The proposal includes two anecdotes, no baseline measurement, and a $120K pilot cost. The team likes the demo but has not mapped overlap with existing tools.",
+      "expected_output": "The output should say the savings claim is not supported yet, preserve the pilot cost and missing baseline, and recommend a measured pilot or evidence request before approval."
+    },
+    {
+      "id": "conflicting-status-update",
+      "prompt": "Distill this status update: Product says the migration is ready for launch on July 1. Support says training is incomplete. Engineering says the rollback plan exists but has not been tested. The launch note says risk is low.",
+      "expected_output": "The output should keep the conflict visible, avoid accepting the low-risk label, and name the decision or verification needed before launch."
+    },
+    {
+      "id": "information-only",
+      "prompt": "Distill this memo: Usage of the new search feature increased from 18% to 27% over four weeks. Retention is unchanged. The team will keep monitoring for another month before recommending changes.",
+      "expected_output": "The output should say no decision is needed yet, preserve both usage and retention facts, and warn against treating usage lift as full product success."
+    }
+  ]
+}

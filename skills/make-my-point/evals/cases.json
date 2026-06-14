@@ -1,0 +1,21 @@
+{
+  "skill_name": "make-my-point",
+  "version": "1.0.0-public",
+  "cases": [
+    {
+      "id": "budget-request",
+      "prompt": "Rewrite this for a finance leader: We probably need extra implementation support because demand is up and the current team is very stretched. It would be helpful to get two contractors for the rest of the quarter, but I know budgets are tight.",
+      "expected_output": "The output should name the funding ask, make the decision explicit, preserve uncertainty, and explain the capacity risk without sounding entitled."
+    },
+    {
+      "id": "technical-risk",
+      "prompt": "Rewrite this for a product leader: The API migration is almost done, but staging has not covered retry behavior from connected services. I think launch may still work, but we could create reliability issues if we skip validation.",
+      "expected_output": "The output should translate the technical issue into product risk, recommend validation before launch, and avoid implying the launch will definitely fail."
+    },
+    {
+      "id": "weak-customer-story",
+      "prompt": "Rewrite this customer story so sales can use it responsibly: The customer said onboarding feels easier now. We do not have a measured ROI number, but the team thinks the workflow is smoother.",
+      "expected_output": "The output should make the story usable while warning not to claim ROI or broader proof without measurement."
+    }
+  ]
+}

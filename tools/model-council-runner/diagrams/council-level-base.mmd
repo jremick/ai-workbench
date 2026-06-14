@@ -1,0 +1,16 @@
+flowchart TD
+  Task["Task or evidence packet"] --> RolePlan["Choose base roles<br/>structural, empirical, contrarian"]
+  RolePlan --> PromptSet["Render isolated prompts<br/>same task, different lens"]
+  PromptSet --> Fanout["Fan out workers in parallel"]
+
+  Fanout --> Structural["Structural analyst<br/>frame, constraints, assumptions"]
+  Fanout --> Empirical["Empirical analyst<br/>evidence, sources, falsifiable claims"]
+  Fanout --> Contrarian["Contrarian analyst<br/>failure modes, alternatives, weak framing"]
+
+  Structural --> Outputs["Structured worker outputs<br/>answer, claims, evidence, uncertainty"]
+  Empirical --> Outputs
+  Contrarian --> Outputs
+
+  Outputs --> SynthesisPrompt["Synthesis prompt<br/>task plus independent outputs"]
+  SynthesisPrompt --> Synthesizer["Synthesizer<br/>consensus, disagreements, accepted claims, gaps"]
+  Synthesizer --> Final["Final answer<br/>with confidence and next checks"]

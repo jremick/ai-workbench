@@ -1,0 +1,97 @@
+{
+  "skill_name": "deterministic-controls",
+  "version": "1.0.0-public",
+  "threshold": 0.92,
+  "cases": [
+    {
+      "id": "structured-model-output",
+      "prompt": "An agent emits JSON that a harness uses to choose the next tool and arguments. The current prompt says 'always output valid JSON'. What deterministic controls are needed?",
+      "expected": "Recommend a canonical schema, parse-before-action validation, bounded repair or rejection, and fixture tests for valid and malformed outputs.",
+      "checks": [
+        {"name": "schema validation", "any": ["JSON Schema", "Zod", "Pydantic", "typed dataclass"]},
+        {"name": "parse before action", "any": ["Parse before acting", "parse-and-repair", "parse before any side effect"]},
+        {"name": "bounded repair", "any": ["bounded loop", "bounded repair", "repair limits"]},
+        {"name": "malformed fixtures", "any": ["malformed", "extra-field", "missing"]}
+      ],
+      "avoid": ["prompt-only JSON instructions", "prompt-only enforcement"]
+    },
+    {
+      "id": "tool-permission-gate",
+      "prompt": "A coding agent can run shell commands and write files. It should be safe in a managed desktop environment. What should be deterministic?",
+      "expected": "Recommend tool wrappers, allowlists or deny-by-default policy, dry-run or approval gates for risky actions, path sandboxing, and structured audit logs.",
+      "checks": [
+        {"name": "deny by default", "any": ["Fail closed by default", "deny-by-default"]},
+        {"name": "tool wrapper", "any": ["tool wrapper", "typed adapters", "Wrap tools"]},
+        {"name": "path sandbox", "any": ["path sandbox", "working-directory constraints", "allowed paths"]},
+        {"name": "approval or dry run", "any": ["dry-run", "approval gate", "dry-run mode"]},
+        {"name": "audit log", "any": ["structured logs", "audit logs", "policy version"]}
+      ],
+      "avoid": ["silent best-effort behavior"]
+    },
+    {
+      "id": "agent-routing",
+      "prompt": "A system uses an LLM to decide which skill, connector, or workflow receives a task. Mistakes can route sensitive work into the wrong system. What is the best practice?",
+      "expected": "Recommend explicit router tables, allowed destinations, deterministic facts separated from model judgment, fallback-to-ask behavior, and golden routing tests.",
+      "checks": [
+        {"name": "router table", "any": ["explicit router table", "router table"]},
+        {"name": "allowed destinations", "any": ["allowed destinations", "allowlist"]},
+        {"name": "split facts and judgment", "any": ["Split deterministic facts from model judgment", "deterministic facts from model judgment"]},
+        {"name": "fallback to ask", "any": ["fallback-to-ask", "safe fallback"]},
+        {"name": "routing tests", "any": ["Golden routing cases", "golden cases", "ambiguous-case tests"]}
+      ],
+      "avoid": ["free-form model for routing"]
+    },
+    {
+      "id": "long-running-resume",
+      "prompt": "A long-running agent resumes after interruption and may repeat external actions like messages or deploys. What controls should be implemented?",
+      "expected": "Recommend an explicit state machine, checkpoint schema, idempotency keys, duplicate detection, invalid-transition tests, and replayable non-secret traces.",
+      "checks": [
+        {"name": "state machine", "any": ["Explicit state machine", "state machine"]},
+        {"name": "checkpoint", "any": ["durable checkpoint", "checkpoint schema", "checkpoints"]},
+        {"name": "idempotency", "any": ["idempotency key", "idempotency keys"]},
+        {"name": "invalid transition", "any": ["invalid-transition", "invalid transitions"]},
+        {"name": "duplicate side effects", "any": ["duplicate side effects", "duplicate detection"]}
+      ],
+      "avoid": ["hidden infinite retries"]
+    },
+    {
+      "id": "eval-release-gate",
+      "prompt": "A new skill is intended for production use. How should its performance and regressions be controlled?",
+      "expected": "Recommend versioned eval cases, a deterministic scorer, threshold, regression report, CI or release gate, and waiver explanation for failures.",
+      "checks": [
+        {"name": "versioned evals", "any": ["Version eval cases", "versioned eval cases"]},
+        {"name": "deterministic scorer", "any": ["deterministic scorer", "deterministic scorers"]},
+        {"name": "threshold", "any": ["threshold"]},
+        {"name": "regression report", "any": ["regression report"]},
+        {"name": "release gate", "any": ["CI or release gate", "release gate"]}
+      ],
+      "avoid": ["subjective manual interpretation"]
+    },
+    {
+      "id": "low-risk-brainstorming",
+      "prompt": "A user asks an agent to brainstorm naming options for an internal prototype. No external action is taken. Do we need deterministic controls?",
+      "expected": "Recommend no heavy deterministic control; use model judgment, lightweight prompt guidance, or human review because the surface is low risk.",
+      "checks": [
+        {"name": "low risk no control", "any": ["do not add a deterministic control", "usually unnecessary", "low risk"]},
+        {"name": "model judgment", "any": ["model judgment", "semantic judgment"]},
+        {"name": "human review", "any": ["human review", "human will review"]},
+        {"name": "brainstorming", "any": ["brainstorming", "design alternatives"]}
+      ],
+      "avoid": ["fail closed"]
+    },
+    {
+      "id": "auditability",
+      "prompt": "An agent approves connector actions and needs incident review evidence. Which deterministic controls matter?",
+      "expected": "Recommend structured logs with event IDs, actor/source attribution, request IDs, policy version, sanitized failure reasons, retention, and replayable traces.",
+      "checks": [
+        {"name": "event id", "any": ["event ID", "event IDs"]},
+        {"name": "actor", "any": ["actor", "actor/source attribution"]},
+        {"name": "request id", "any": ["request ID"]},
+        {"name": "policy version", "any": ["policy version"]},
+        {"name": "sanitized failure", "any": ["sanitized failure reason", "sanitized output"]},
+        {"name": "replayable traces", "any": ["replayable traces", "replayable"]}
+      ],
+      "avoid": ["leaking secrets"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+flowchart TD
+  Task["High-risk task or claim"] --> Base["Run base council<br/>independent workers and synthesis"]
+  Base --> Provisional["Provisional synthesis<br/>accepted claims and gaps"]
+  Provisional --> CriticPrompt["Adversarial prompt<br/>task, worker outputs, synthesis, risk rubric"]
+  CriticPrompt --> Critic["Critic or red-team worker<br/>attack assumptions and unsupported claims"]
+  Critic --> Challenge["Challenge report<br/>severity, evidence, proposed fixes"]
+  Challenge --> Decision{"Material issue found?"}
+  Decision -->|No| Final["Finalize synthesis<br/>note adversarial pass"]
+  Decision -->|Yes| TargetedReview["Targeted review<br/>rerun narrow worker or revise synthesis"]
+  TargetedReview --> Revised["Revised synthesis<br/>accepted, rejected, unresolved claims"]
+  Revised --> Final

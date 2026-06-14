@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">AI Workbench artifact map</title>
+  <desc id="desc">A visual map of AI Workbench artifact categories: skills, harnesses, agents and plugins, frameworks, and resources.</desc>
+  <rect width="1200" height="520" fill="#f7f8f5"/>
+  <rect x="56" y="48" width="1088" height="424" rx="18" fill="#ffffff" stroke="#d8ded6"/>
+  <text x="96" y="105" fill="#18201d" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">AI Workbench</text>
+  <text x="96" y="139" fill="#53615c" font-family="Inter, Arial, sans-serif" font-size="17">Skills, harnesses, agents, plugins, frameworks, and resources we use.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="96" y="188" width="184" height="152" rx="12" fill="#e7f1ee" stroke="#7ba99c"/>
+    <text x="120" y="226" fill="#17342d" font-size="21" font-weight="700">Skills</text>
+    <text x="120" y="258" fill="#31524a" font-size="15">Reusable agent</text>
+    <text x="120" y="281" fill="#31524a" font-size="15">workflows</text>
+    <text x="120" y="314" fill="#31524a" font-size="13">skills/</text>
+
+    <rect x="306" y="188" width="184" height="152" rx="12" fill="#f1ece2" stroke="#b49a68"/>
+    <text x="330" y="226" fill="#3c2e12" font-size="21" font-weight="700">Harnesses</text>
+    <text x="330" y="258" fill="#5d4b28" font-size="15">Project shape,</text>
+    <text x="330" y="281" fill="#5d4b28" font-size="15">checks, handoffs</text>
+    <text x="330" y="314" fill="#5d4b28" font-size="13">project, meta, verify</text>
+
+    <rect x="516" y="188" width="184" height="152" rx="12" fill="#e8edf4" stroke="#8298b8"/>
+    <text x="540" y="226" fill="#1b2d49" font-size="21" font-weight="700">Agents</text>
+    <text x="540" y="258" fill="#334b70" font-size="15">Delegation, MCP,</text>
+    <text x="540" y="281" fill="#334b70" font-size="15">context packets</text>
+    <text x="540" y="314" fill="#334b70" font-size="13">plugins + patterns</text>
+
+    <rect x="726" y="188" width="184" height="152" rx="12" fill="#f0e7eb" stroke="#b78496"/>
+    <text x="750" y="226" fill="#482132" font-size="21" font-weight="700">Frameworks</text>
+    <text x="750" y="258" fill="#6c3b4e" font-size="15">Models, worksheets,</text>
+    <text x="750" y="281" fill="#6c3b4e" font-size="15">assessment guides</text>
+    <text x="750" y="314" fill="#6c3b4e" font-size="13">frameworks/</text>
+
+    <rect x="936" y="188" width="184" height="152" rx="12" fill="#edf0e6" stroke="#9aaa70"/>
+    <text x="960" y="226" fill="#344018" font-size="21" font-weight="700">Resources</text>
+    <text x="960" y="258" fill="#536128" font-size="15">Starter kits, docs,</text>
+    <text x="960" y="281" fill="#536128" font-size="15">fixtures, examples</text>
+    <text x="960" y="314" fill="#536128" font-size="13">resources/ + docs/</text>
+
+    <text x="600" y="404" fill="#53615c" font-size="17" text-anchor="middle">Open a category, read the artifact README, copy or adapt what fits.</text>
+  </g>
+</svg>

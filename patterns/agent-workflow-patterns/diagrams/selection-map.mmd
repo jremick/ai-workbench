@@ -1,0 +1,23 @@
+graph TD
+  Start["Task request"] --> Simple{"Can one agent handle it<br/>with direct verification?"}
+  Simple -->|Yes| Single["Use the normal loop"]
+  Simple -->|No| Routing{"Need to classify<br/>or route items?"}
+  Routing -->|Yes| Classify["Classify-and-act"]
+  Routing -->|No| Units{"Many independent<br/>units or sources?"}
+  Units -->|Yes| Fan["Fan-out-and-synthesize"]
+  Units -->|No| Compete{"Need competing<br/>approaches?"}
+  Compete -->|Yes| Tournament["Tournament"]
+  Compete -->|No| Unknown{"Unknown amount<br/>of work?"}
+  Unknown -->|Yes| Loop["Loop until done"]
+  Unknown -->|No| Generate["Generate-and-filter"]
+
+  Classify --> Risk{"High risk or<br/>untrusted input?"}
+  Fan --> Risk
+  Tournament --> Risk
+  Generate --> Risk
+  Loop --> Risk
+  Risk -->|Yes| Verify["Adversarial verification"]
+  Risk -->|Untrusted public input| Quarantine["Quarantine-and-act"]
+  Risk -->|No| Result["Synthesize result"]
+  Verify --> Result
+  Quarantine --> Result

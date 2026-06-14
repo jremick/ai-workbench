@@ -1,0 +1,7 @@
+graph TD
+  Untrusted["Untrusted input"] --> Reader["Low-privilege reader"]
+  Reader --> Extract["Extract structured facts<br/>and cited evidence"]
+  Extract --> Gate["Sanitization gate"]
+  Gate --> Actor["Privileged actor"]
+  Actor --> Action["Action or update"]
+  Gate --> Reject["Reject unsafe instruction"]

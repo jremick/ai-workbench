@@ -1,0 +1,21 @@
+{
+  "skill_name": "nested-agent-orchestrator",
+  "version": "1.0.0-public",
+  "cases": [
+    {
+      "id": "repo-audit",
+      "prompt": "I need to audit a repo with frontend, backend, and docs. Should we use sub-agents, and what should each one do?",
+      "expected_output": "The output should recommend bounded parallel agents, define context and write permissions, and include an integration and verification gate."
+    },
+    {
+      "id": "single-bug",
+      "prompt": "A single unit test fails in one module. Should I spawn multiple agents to investigate?",
+      "expected_output": "The output should advise against delegation unless an independent verification agent is useful after the fix, and should keep the critical path direct."
+    },
+    {
+      "id": "sidecar-critique",
+      "prompt": "Use a different model to critique my implementation plan before I edit files.",
+      "expected_output": "The output should define a read-only sidecar critique contract, limit context, and keep the parent responsible for accepting or rejecting suggestions."
+    }
+  ]
+}

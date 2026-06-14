@@ -1,0 +1,19 @@
+flowchart TD
+  Task["Large research, strategy, or architecture task"] --> Decompose["Decompose into packets<br/>sources, domains, decisions, risks"]
+  Decompose --> PacketA["Packet A<br/>source or domain lane"]
+  Decompose --> PacketB["Packet B<br/>source or domain lane"]
+  Decompose --> PacketC["Packet C<br/>implementation or risk lane"]
+
+  PacketA --> LaneA["Lane council<br/>specialist workers and mini-synthesis"]
+  PacketB --> LaneB["Lane council<br/>specialist workers and mini-synthesis"]
+  PacketC --> LaneC["Lane council<br/>specialist workers and mini-synthesis"]
+
+  LaneA --> Cross["Cross-lane synthesis<br/>dedupe, reconcile, identify conflicts"]
+  LaneB --> Cross
+  LaneC --> Cross
+
+  Cross --> Review["Independent verification pass<br/>source checks, red-team, feasibility review"]
+  Review --> Integration{"Major gap or conflict?"}
+  Integration -->|Yes| Rework["Targeted packet rework<br/>rerun lane or gather evidence"]
+  Rework --> Cross
+  Integration -->|No| Final["Final deliverable<br/>decision, tradeoffs, evidence, open questions"]

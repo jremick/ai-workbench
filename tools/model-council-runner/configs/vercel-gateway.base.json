@@ -1,0 +1,49 @@
+{
+  "schema_version": "model-council-runner/v1",
+  "name": "base-vercel-gateway-council",
+  "run_mode": "vercel-ai-gateway",
+  "council_level": "base",
+  "execution": {
+    "parallel_workers": true,
+    "timeout_seconds": 1800,
+    "temperature": 0
+  },
+  "gateway": {
+    "base_url": "https://ai-gateway.vercel.sh/v1",
+    "auth_env": ["AI_GATEWAY_API_KEY", "VERCEL_OIDC_TOKEN"]
+  },
+  "roles": [
+    {
+      "id": "structural",
+      "label": "Structural Analyst",
+      "provider": "openai",
+      "adapter": "vercel_ai_gateway",
+      "model": "openai/gpt-5.4",
+      "focus": "Map the problem, constraints, assumptions, and decision frame."
+    },
+    {
+      "id": "empirical",
+      "label": "Empirical Analyst",
+      "provider": "anthropic",
+      "adapter": "vercel_ai_gateway",
+      "model": "anthropic/claude-opus-4.8",
+      "focus": "Evaluate evidence, source quality, benchmark design, and falsifiable claims."
+    },
+    {
+      "id": "contrarian",
+      "label": "Contrarian Analyst",
+      "provider": "google",
+      "adapter": "vercel_ai_gateway",
+      "model": "google/gemini-3.1-pro-preview",
+      "focus": "Find failure modes, alternate explanations, and weak assumptions."
+    }
+  ],
+  "synthesizer": {
+    "id": "synthesizer",
+    "label": "Council Synthesizer",
+    "provider": "openai",
+    "adapter": "vercel_ai_gateway",
+    "model": "openai/gpt-5.4",
+    "focus": "Synthesize worker outputs into a decision-ready answer with disagreement preserved."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "smoke-runner",
+  "title": "Model council runner smoke task",
+  "question": "When should a model-council skill use local CLIs versus a hosted AI gateway?",
+  "context": [
+    "The workflow should support OpenAI, Anthropic, Google, and xAI model routes.",
+    "The runner should keep model routes explicit and configurable.",
+    "The runner should be deterministic enough to dry-run without spending model tokens."
+  ],
+  "success_criteria": [
+    "Name the route tradeoffs.",
+    "Identify deterministic controls required for repeatability.",
+    "Preserve material disagreement in the synthesis.",
+    "Recommend a safe base benchmark setup."
+  ]
+}

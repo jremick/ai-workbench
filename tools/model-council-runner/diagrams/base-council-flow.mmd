@@ -1,0 +1,28 @@
+flowchart TD
+  Task["Task JSON<br/>question, context, success criteria"] --> Config["Council config<br/>roles, adapters, models, timeouts"]
+  Config --> Validate["Validate<br/>schema, task shape, route binaries"]
+  Validate --> PromptBuild["Render isolated worker prompts<br/>same task frame, role-specific lens"]
+  PromptBuild --> Manifest["Write run manifest<br/>task, config, prompts, command arrays"]
+  Manifest --> ExecuteGate{"Execute now?"}
+  ExecuteGate -->|No| DryRun["Review prompts and route plan<br/>planned prompts, commands, manifest"]
+  DryRun --> RevisePlan["Revise task, roles, prompts, models, or routes"]
+  RevisePlan --> Config
+  ExecuteGate -->|Yes| WorkerFanout["Parallel worker fan-out"]
+
+  WorkerFanout --> W1["Structural analyst<br/>problem frame and assumptions"]
+  WorkerFanout --> W2["Empirical analyst<br/>evidence and falsifiable claims"]
+  WorkerFanout --> W3["Contrarian analyst<br/>failure modes and alternatives"]
+  WorkerFanout --> W4["Implementation reviewer<br/>operational risks and controls"]
+
+  W1 --> WorkerOutputs["Structured worker outputs<br/>claims, evidence, uncertainty, failure modes"]
+  W2 --> WorkerOutputs
+  W3 --> WorkerOutputs
+  W4 --> WorkerOutputs
+
+  WorkerOutputs --> Logs["Per-route stdout, stderr, output text"]
+  Logs --> Barrier["Barrier<br/>all worker statuses recorded"]
+  Barrier --> SynthPrompt["Build synthesizer prompt<br/>task plus worker outputs"]
+  SynthPrompt --> SynthRoute["Run synthesizer route"]
+  SynthRoute --> Synthesis["Synthesis JSON<br/>consensus, disagreements, accepted claims, gaps"]
+  Synthesis --> Verification["Verification gate<br/>parse quality, missing routes, unresolved disagreement"]
+  Verification --> Output["Run artifacts<br/>manifest, prompts, logs, outputs"]

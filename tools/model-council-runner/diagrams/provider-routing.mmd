@@ -1,0 +1,22 @@
+flowchart TD
+  Role["Role route<br/>provider, adapter, model, timeout"] --> Adapter{"Adapter"}
+  Adapter -->|codex_exec| CodexCheck["Check codex CLI<br/>build codex exec command"]
+  Adapter -->|claude_code| ClaudeCheck["Check claude CLI<br/>build claude -p command"]
+  Adapter -->|antigravity_cli| AgyCheck["Check agy CLI<br/>build agy --print command"]
+  Adapter -->|grok_cli| GrokCheck["Check grok CLI<br/>build grok --prompt-file command"]
+  Adapter -->|vercel_ai_gateway| GatewayCheck["Check Gateway auth<br/>optionally list model IDs"]
+
+  CodexCheck --> LocalExec["Local process execution<br/>prompt via stdin or argument"]
+  ClaudeCheck --> LocalExec
+  AgyCheck --> LocalExec
+  GrokCheck --> LocalExec
+
+  GatewayCheck --> GatewayExec["Gateway API execution<br/>OpenAI-compatible chat completions"]
+
+  LocalExec --> Capture["Capture stdout, stderr, output text, exit code"]
+  GatewayExec --> Capture
+  Capture --> Status{"Route succeeded?"}
+  Status -->|Yes| WorkerOutput["Worker output available for synthesis"]
+  Status -->|No| RouteFailure["Route failure recorded<br/>no silent provider substitution"]
+  WorkerOutput --> Manifest["Update manifest"]
+  RouteFailure --> Manifest
