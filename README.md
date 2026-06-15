@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache_2.0-blue.svg"/></a>
   <img alt="Status" src="https://img.shields.io/badge/status-public_working_collection-2f6f5f.svg"/>
   <a href="docs/skills.md"><img alt="Skills" src="https://img.shields.io/badge/skills-catalog-5964a8.svg"/></a>
   <a href="resources/README.md"><img alt="Resources" src="https://img.shields.io/badge/resources-available-8a6f2a.svg"/></a>
@@ -17,7 +17,7 @@
   <img src="assets/workbench-map.svg" alt="AI Workbench artifact map" width="880"/>
 </p>
 
-> **Status:** AI Workbench is a public, evolving collection. The artifacts are usable and MIT-licensed, but this is not a packaged product; individual skills, tools, and examples may change as the patterns mature.
+> **Status:** AI Workbench is a public, evolving collection. The artifacts are usable and Apache-2.0-licensed, but this is not a packaged product; individual skills, tools, and examples may change as the patterns mature.
 
 > Built and maintained by [Jarel Remick](https://github.com/jremick).
 
@@ -111,4 +111,4 @@ The meta-harness pieces are for shaping larger agent workflows: [Harness Compose
 
 ## License
 
-[MIT License](LICENSE) - Copyright 2026 Jarel Remick.
+[Apache License 2.0](LICENSE) - Copyright 2026 Jarel Remick.
