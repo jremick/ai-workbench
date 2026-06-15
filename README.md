@@ -1,20 +1,62 @@
-# AI Workbench
+<h1 align="center">AI Workbench</h1>
 
-Skills, harnesses, agents, plugins, frameworks, and resources built and used for agentic AI work.
+<p align="center">
+  <strong>Reusable skills, harnesses, agent patterns, frameworks, and resources for practical agentic AI work.</strong>
+  <br/>
+  A selective working collection for keeping agents scoped, verifiable, and useful outside one private workspace.
+</p>
 
-This is a selective working collection, not a prompt dump. Most of it came from repeated use: keeping agents scoped, designing project harnesses, managing context, choosing verification paths, and moving deterministic work out of prompts and into code or checks.
+<p align="center">
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
+  <img alt="Status" src="https://img.shields.io/badge/status-public_working_collection-2f6f5f.svg"/>
+  <a href="docs/skills.md"><img alt="Skills" src="https://img.shields.io/badge/skills-catalog-5964a8.svg"/></a>
+  <a href="resources/README.md"><img alt="Resources" src="https://img.shields.io/badge/resources-available-8a6f2a.svg"/></a>
+</p>
 
-![AI Workbench map](assets/workbench-map.svg)
+<p align="center">
+  <img src="assets/workbench-map.svg" alt="AI Workbench artifact map" width="880"/>
+</p>
 
-## Overview
+> **Status:** AI Workbench is a public, evolving collection. The artifacts are usable and MIT-licensed, but this is not a packaged product; individual skills, tools, and examples may change as the patterns mature.
 
-| Group | What's In It | Where To Look |
+> Built and maintained by [Jarel Remick](https://github.com/jremick).
+
+## What is AI Workbench?
+
+AI Workbench collects reusable AI operating artifacts: agent skills, project harnesses, workflow patterns, model-council tools, adoption frameworks, starter kits, diagrams, fixtures, and public-safe examples.
+
+Most of it came from repeated use: keeping agents scoped, designing project harnesses, managing context, choosing verification paths, and moving deterministic work out of prompts and into code or checks.
+
+This is a selective working collection, not a prompt dump.
+
+## Why this exists
+
+- **Reusable agent work** - turn repeated operating patterns into skills, templates, checks, and small tools.
+- **Public-safe examples** - keep the reusable pattern while removing private workspace details, secrets, local paths, and raw session history.
+- **Verification-first habits** - pair agent workflows with the smallest credible proof path: evals, validators, read-backs, fixtures, screenshots, or documented manual checks.
+- **Higher-level project harnesses** - make broad agentic work concrete enough to start, delegate, inspect, and finish.
+
+## Quick start
+
+Clone the repo and start from the catalog that matches what you want to adapt:
+
+```bash
+git clone https://github.com/jremick/ai-workbench.git
+cd ai-workbench
+
+# Optional sanity check for the model-council package and fixtures.
+python3 scripts/validate_model_council_package.py
+```
+
+Then browse by category:
+
+| Group | What's in it | Where to look |
 | --- | --- | --- |
 | Frameworks | Models and worksheets for thinking about AI adoption, maturity, and operating constraints. | [SMB AI Maturity Model](frameworks/smb-ai-maturity-model/README.md) |
 | Patterns | Reusable workflow shapes for splitting, routing, verifying, and repeating agent work. | [Agent Workflow Patterns](patterns/agent-workflow-patterns/README.md) |
 | Skills | Reusable instructions for recurring agent work: writing, triage, diagramming, auth handling, MCP work, model councils, research, and context boundaries. | [skills](skills/) and [docs/skills.md](docs/skills.md) |
 | Harnesses | Operating patterns for starting projects, composing nested work, routing verification, and keeping larger agent tasks coherent. | [project-harness-designer](skills/project-harness-designer/README.md), [harness-composer](skills/harness-composer/README.md), [verification-harness-router](skills/verification-harness-router/README.md) |
-| Agents and Plugins | Patterns for delegation, sidecar agents, MCP servers, tool boundaries, and context packets. | [nested-agent-orchestrator](skills/nested-agent-orchestrator/README.md), [mcp-build](skills/mcp-build/README.md), [context-boundary-designer](skills/context-boundary-designer/README.md) |
+| Agents and plugins | Patterns for delegation, sidecar agents, MCP servers, tool boundaries, and context packets. | [nested-agent-orchestrator](skills/nested-agent-orchestrator/README.md), [mcp-build](skills/mcp-build/README.md), [context-boundary-designer](skills/context-boundary-designer/README.md) |
 | Benchmarks | Dataset prep and scoring harnesses for evaluating skills and agent workflows. | [Model Council DRACO Benchmark](benchmarks/model-council-draco/README.md) |
 | Resources | Starter kits, examples, diagrams, eval fixtures, and reference docs that make the patterns easier to adapt. | [AGENTS example](resources/codex/AGENTS.example.md), [Codex sync workflow](resources/codex/codex-config-sync-workflow.md), [resources](resources/) |
 
@@ -30,7 +72,7 @@ Most artifacts have their own README with usage notes, examples, and the smalles
 
 [Agent Memory Starter](docs/agent-memory-starter.md) is a source-backed memory pattern for agents. It uses curated pages, timeline evidence, searchable chunks, update proposals, fake fixtures, and a retrieval eval so memory can be inspected and tested instead of becoming a transcript pile.
 
-### Model Council And Deep Research
+### Model Council and Deep Research
 
 [Model Council](skills/model-council/README.md) runs independent model workers and a separate synthesis pass, with local CLI routes for Codex, Claude Code, Antigravity, and Grok Build plus a Vercel AI Gateway option. [Deep Research](skills/deep-research/README.md) keeps source-backed research disciplined and escalates difficult synthesis to the council pattern. The companion [runner](tools/model-council-runner/README.md) supports dry-run planning, manifests, and route validation. [Model Council DRACO Benchmark](benchmarks/model-council-draco/README.md) is a separate benchmark package for evaluating the council skill.
 
@@ -53,3 +95,20 @@ The meta-harness pieces are for shaping larger agent workflows: [Harness Compose
 ### Codex Operating Resources
 
 [AGENTS example](resources/codex/AGENTS.example.md) is a cleaned-up global instruction template for pragmatic coding-agent defaults. [Codex sync workflow](resources/codex/codex-config-sync-workflow.md) covers the live-home versus versioned-mirror pattern for keeping reusable Codex instructions, skills, agents, config templates, and setup scripts aligned across machines.
+
+## Documentation
+
+- [Skills catalog](docs/skills.md) - installable public skills and starting points.
+- [Patterns](patterns/README.md) - reusable workflow shapes.
+- [Resources](resources/README.md) - starter kits, templates, and reference material.
+- [Model Council and Deep Research](docs/model-council-and-deep-research.md) - council workflow, routing, and benchmark notes.
+
+## Community and support
+
+- [Issues](https://github.com/jremick/ai-workbench/issues) - bugs, broken links, unclear docs, and concrete improvement ideas.
+- [Contributing](CONTRIBUTING.md) - how to propose public-safe changes.
+- [Security policy](SECURITY.md) - how to report private or sensitive findings.
+
+## License
+
+[MIT License](LICENSE) - Copyright 2026 Jarel Remick.

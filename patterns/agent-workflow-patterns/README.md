@@ -5,7 +5,7 @@ Last updated: 2026-06-04
 
 Reusable patterns for deciding when a single agent loop is enough, when to split work across agents, and how to verify the result.
 
-These patterns are adapted from the dynamic workflow patterns described in Anthropic's article [A harness for every task: dynamic workflows in Claude Code](https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code). The names map closely to that source, but the guidance here is runtime-neutral: the same shapes apply to Claude Code workflows, Codex sub-agents, scripted agent harnesses, or human-designed orchestration.
+These patterns are adapted from Anthropic's dynamic workflow guidance for Claude Code. The names map closely to that source, but the guidance here is runtime-neutral: the same shapes apply to Claude Code workflows, Codex sub-agents, scripted agent harnesses, or human-designed orchestration.
 
 ## When To Use A Workflow
 
@@ -318,5 +318,5 @@ Budget and stop condition:
 
 ## References
 
-- [A harness for every task: dynamic workflows in Claude Code](https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code)
+- [Orchestrate subagents at scale with dynamic workflows](https://code.claude.com/docs/en/workflows)
 - [Original X discussion](https://x.com/trq212/status/2061907337154367865)
