@@ -34,6 +34,10 @@ Most artifacts have their own README with usage notes, examples, and the smalles
 
 [Model Council](skills/model-council/README.md) runs independent model workers and a separate synthesis pass, with local CLI routes for Codex, Claude Code, Antigravity, and Grok Build plus a Vercel AI Gateway option. [Deep Research](skills/deep-research/README.md) keeps source-backed research disciplined and escalates difficult synthesis to the council pattern. The companion [runner](tools/model-council-runner/README.md) supports dry-run planning, manifests, and route validation. [Model Council DRACO Benchmark](benchmarks/model-council-draco/README.md) is a separate benchmark package for evaluating the council skill.
 
+### War Council
+
+[War Council](skills/war-council/README.md) is a decision harness for uncomfortable tradeoffs. It uses advisor personas, weighted scoring, forced $100 allocation, and a deterministic aggregate script to preserve agreements, disagreements, risks, kill criteria, and the final decision ledger.
+
 ### Meta-Harnesses
 
 The meta-harness pieces are for shaping larger agent workflows: [Harness Composer](skills/harness-composer/README.md) for parent and child workstreams, [Nested Agent Orchestrator](skills/nested-agent-orchestrator/README.md) for delegation, [Verification Harness Router](skills/verification-harness-router/README.md) for choosing checks, and [Context Boundary Designer](skills/context-boundary-designer/README.md) for deciding what context belongs where.

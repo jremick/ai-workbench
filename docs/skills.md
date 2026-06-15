@@ -1,7 +1,7 @@
 # Skills
 
-Version: 0.2.0
-Last updated: 2026-06-15
+Version: 0.3.0
+Last updated: 2026-06-16
 
 This directory collects installable agent skills that are intended to be useful outside any private workspace.
 
@@ -20,6 +20,7 @@ Each public skill should include:
 | [Project Harness Designer](../skills/project-harness-designer/README.md) | Starting substantial projects with intent, proof, risks, and a first execution path. | A reusable operating pattern for agent-assisted project starts. |
 | [Deterministic Controls](../skills/deterministic-controls/README.md) | Deciding which agent behavior belongs in code, schemas, gates, and tests. | A reliability skill with a portable eval harness. |
 | [Model Council](../skills/model-council/README.md) | Running independent model workers and synthesizing their outputs with disagreement preserved. | Generalizes a multi-model council pattern with deterministic local CLI and hosted API routes. |
+| [War Council](../skills/war-council/README.md) | Making uncomfortable decisions with advisor personas, weighted scoring, forced allocation, and an audit ledger. | Converts subjective advice into traceable tradeoffs, disagreement, and reversal criteria. |
 | [Deep Research](../skills/deep-research/README.md) | Source-backed research with citation discipline, uncertainty tracking, and council escalation. | A reusable research workflow that pairs clean source handling with council escalation. |
 | [Diagramming](../skills/diagramming/README.md) | Choosing and producing diagrams for docs, architecture, workflows, and presentations. | Converts diagram requests into a clear Mermaid-or-D2 workflow. |
 | [Codex Workflow Harvest](../skills/codex-workflow-harvest/README.md) | Turning repeated agent workflow lessons into durable skills, helpers, or instructions. | Captures an improvement loop without publishing private memory. |
