@@ -1,0 +1,110 @@
+{
+  "version": "0.2.0",
+  "cases": [
+    {
+      "name": "trivial-answer-stays-parent",
+      "task": "What is 2 + 2?",
+      "expect": {
+        "work_type": "trivial",
+        "delegate": false,
+        "top_backend": "codex",
+        "complexity": "low",
+        "review_tier": null,
+        "security_review": false
+      }
+    },
+    {
+      "name": "live-research-uses-perplexity",
+      "task": "Research the latest Artificial Analysis leaderboard changes and summarize the sources.",
+      "expect": {
+        "work_type": "research",
+        "delegate": true,
+        "top_backend": "perplexity",
+        "complexity": "medium",
+        "review_tier": null,
+        "security_review": false
+      }
+    },
+    {
+      "name": "code-review-uses-claude-second-opinion",
+      "task": "Review this pull request for architecture risks, hidden regressions, and missing tests.",
+      "expect": {
+        "work_type": "code_review",
+        "delegate": true,
+        "top_backend": "claude_subscription",
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": false
+      }
+    },
+    {
+      "name": "long-horizon-coding-uses-deepswe-signal",
+      "task": "Implement a multi-file repository migration with tests across unfamiliar modules.",
+      "expect": {
+        "work_type": "long_horizon_coding",
+        "delegate": true,
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": false,
+        "top_model_any_of": [
+          "openai/gpt-5.4",
+          "openai/gpt-5.5"
+        ]
+      }
+    },
+    {
+      "name": "local-private-prefers-local",
+      "task": "Analyze this private local document offline without sending it to an external provider.",
+      "flags": {
+        "privacy": "local_only"
+      },
+      "expect": {
+        "work_type": "local_private",
+        "delegate": true,
+        "top_backend": "lmstudio",
+        "complexity": "medium",
+        "review_tier": null,
+        "security_review": false
+      }
+    },
+    {
+      "name": "high-risk-avoids-cheapest-route",
+      "task": "Stress test this irreversible production migration plan and identify failure modes.",
+      "flags": {
+        "risk": "high"
+      },
+      "expect": {
+        "work_type": "high_risk_analysis",
+        "delegate": true,
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": false,
+        "not_top_model": "openai/gpt-5.4-mini"
+      }
+    },
+    {
+      "name": "frontend-qa-stays-codex-tools",
+      "task": "Open the local app in the browser, inspect responsive UI behavior, and verify screenshots.",
+      "expect": {
+        "work_type": "frontend_qa",
+        "delegate": false,
+        "top_backend": "codex",
+        "complexity": "medium",
+        "review_tier": null,
+        "security_review": false
+      }
+    },
+    {
+      "name": "auth-change-requests-security-review",
+      "task": "Implement OAuth login, API token storage, and permission checks for production.",
+      "expect": {
+        "work_type": "implementation",
+        "delegate": false,
+        "top_backend": "codex",
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1455 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at_utc": "2026-06-16T08:04:10+00:00",
+  "source": "Artificial Analysis + committed catalog policy",
+  "attribution_required": true,
+  "artificial_analysis_cache": {
+    "path": "data/artificial_analysis_models.cache.json",
+    "used": true,
+    "matched_models": 7,
+    "proxy_models": 0,
+    "attribution_required": true
+  },
+  "model_values": [
+    {
+      "model": "openai/gpt-5.5",
+      "display_name": "GPT-5.5",
+      "provider": "openai",
+      "backend": "codex",
+      "artificial_analysis": {
+        "id": "1f054429-397e-4fdb-9e71-67bc92c1735e",
+        "name": "GPT-5.5 (xhigh)",
+        "slug": "gpt-5-5",
+        "match_requested": "GPT-5.5",
+        "proxy_status": null,
+        "evaluations": {
+          "artificial_analysis_intelligence_index": 54.8,
+          "artificial_analysis_coding_index": 59.1
+        },
+        "pricing": {
+          "price_1m_blended_3_to_1": 11.25
+        },
+        "speed": {
+          "median_output_tokens_per_second": 66.647,
+          "median_time_to_first_token_seconds": 82.811
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-5.4",
+      "display_name": "GPT-5.4",
+      "provider": "openai",
+      "backend": "codex",
+      "artificial_analysis": {
+        "id": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
+        "name": "GPT-5.4 (xhigh)",
+        "slug": "gpt-5-4",
+        "match_requested": "GPT-5.4",
+        "proxy_status": null,
+        "evaluations": {
+          "artificial_analysis_intelligence_index": 51.4,
+          "artificial_analysis_coding_index": 57.2
+        },
+        "pricing": {
+          "price_1m_blended_3_to_1": 5.625
+        },
+        "speed": {
+          "median_output_tokens_per_second": 191.21,
+          "median_time_to_first_token_seconds": 88.916
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "display_name": "GPT-5.4 Mini",
+      "provider": "openai",
+      "backend": "codex",
+      "artificial_analysis": {
+        "id": "ba242e40-83b7-4cd3-a0e0-b56237984914",
+        "name": "GPT-5.4 mini (xhigh)",
+        "slug": "gpt-5-4-mini",
+        "match_requested": "GPT-5.4 Mini",
+        "proxy_status": null,
+        "evaluations": {
+          "artificial_analysis_intelligence_index": 40,
+          "artificial_analysis_coding_index": 51.5
+        },
+        "pricing": {
+          "price_1m_blended_3_to_1": 1.688
+        },
+        "speed": {
+          "median_output_tokens_per_second": 187.132,
+          "median_time_to_first_token_seconds": 6.971
+        }
+      }
+    },
+    {
+      "model": "claude/sonnet",
+      "display_name": "Claude Sonnet via subscription",
+      "provider": "anthropic",
+      "backend": "claude_subscription",
+      "artificial_analysis": {
+        "id": "2e40e695-3cec-43da-83f9-615af30b8e91",
+        "name": "Claude Sonnet 4.6 (Non-reasoning, High Effort)",
+        "slug": "claude-sonnet-4-6",
+        "match_requested": "claude-sonnet-4-6",
+        "proxy_status": null,
+        "evaluations": {
+          "artificial_analysis_intelligence_index": 35.9,
+          "artificial_analysis_coding_index": 46.4
+        },
+        "pricing": {
+          "price_1m_blended_3_to_1": 6
+        },
+        "speed": {
+          "median_output_tokens_per_second": 54.226,
+          "median_time_to_first_token_seconds": 1.003
+        }
+      }
+    },
+    {
+      "model": "claude/opus",
+      "display_name": "Claude Opus 4.8 via subscription",
+      "provider": "anthropic",
+      "backend": "claude_subscription",
+      "artificial_analysis": {
+        "id": "992b7b84-5069-4c6a-9295-834252553d50",
+        "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+        "slug": "claude-opus-4-8",
+        "match_requested": "claude-opus-4-8",
+        "proxy_status": null,
+        "evaluations": {
+          "artificial_analysis_intelligence_index": 55.7,
+          "artificial_analysis_coding_index": 56.7
+        },
+        "pricing": {
+          "price_1m_blended_3_to_1": 10
+        },
+        "speed": {
+          "median_output_tokens_per_second": 67.785,
+          "median_time_to_first_token_seconds": 41.62
+        }
+      }
+    },
+    {
+      "model": "google/gemini-3.1-pro",
+      "display_name": "Gemini 3.1 Pro via Perplexity bridge",
+      "provider": "google",
+      "backend": "perplexity",
+      "artificial_analysis": {
+        "id": "bbd93ebe-80da-4594-bb19-61e69d0331df",
+        "name": "Gemini 3.1 Pro Preview",
+        "slug": "gemini-3-1-pro-preview",
+        "match_requested": "gemini-3-1-pro-preview",
+        "proxy_status": null,
+        "evaluations": {
+          "artificial_analysis_intelligence_index": 46.5,
+          "artificial_analysis_coding_index": 55.5
+        },
+        "pricing": {
+          "price_1m_blended_3_to_1": 4.5
+        },
+        "speed": {
+          "median_output_tokens_per_second": 132.896,
+          "median_time_to_first_token_seconds": 31.965
+        }
+      }
+    },
+    {
+      "model": "perplexity/sonar",
+      "display_name": "Perplexity Sonar",
+      "provider": "perplexity",
+      "backend": "perplexity",
+      "artificial_analysis": {
+        "id": "5ec4a0db-da66-4e46-9682-fceeed755ef8",
+        "name": "Sonar",
+        "slug": "sonar",
+        "match_requested": "sonar",
+        "proxy_status": null,
+        "evaluations": {
+          "artificial_analysis_intelligence_index": 9.5,
+          "artificial_analysis_coding_index": null
+        },
+        "pricing": {
+          "price_1m_blended_3_to_1": 0
+        },
+        "speed": {
+          "median_output_tokens_per_second": 0,
+          "median_time_to_first_token_seconds": 0
+        }
+      }
+    }
+  ],
+  "recommendation_profiles": [
+    {
+      "name": "trivial-answer-stays-parent",
+      "task": "What is 2 + 2?",
+      "flags": {},
+      "work_type": "trivial",
+      "delegate": false,
+      "top_model": "parent/codex-default",
+      "top_backend": "codex",
+      "recommended_routes": [
+        {
+          "role": "parent_executor",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "none",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 19.8,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=2",
+            "parent_codex_default"
+          ],
+          "route_command": null
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "low",
+        "review_tier": null,
+        "security_review": false,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "none",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 19.8,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=2",
+            "parent_codex_default"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "orchestrator": {
+          "role": "orchestrator_low",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "none",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 19.8,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=2",
+            "parent_codex_default"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "coder": {
+          "role": "coder_low",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "none",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 19.8,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=2",
+            "parent_codex_default"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "reviewer": null,
+        "security_reviewer": null,
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command."
+        ]
+      }
+    },
+    {
+      "name": "live-research-uses-perplexity",
+      "task": "Research the latest Artificial Analysis leaderboard changes and summarize the sources.",
+      "flags": {},
+      "work_type": "research",
+      "delegate": true,
+      "top_model": "perplexity/sonar",
+      "top_backend": "perplexity",
+      "recommended_routes": [
+        {
+          "role": "research_scout",
+          "model": "perplexity/sonar",
+          "display_name": "Perplexity Sonar",
+          "backend": "perplexity",
+          "provider": "perplexity",
+          "route_target": "perplexity:perplexity/sonar",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "none"
+          },
+          "score": 28.275,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=4",
+            "cost_tier=2",
+            "live_research_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec perplexity:perplexity/sonar --mode read"
+        },
+        {
+          "role": "research_scout",
+          "model": "google/gemini-3.1-pro",
+          "display_name": "Gemini 3.1 Pro via Perplexity bridge",
+          "backend": "perplexity",
+          "provider": "google",
+          "route_target": "perplexity:google/gemini-3.1-pro-preview",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 15.215,
+          "reasons": [
+            "work_type_fit=6",
+            "quality_tier=5",
+            "cost_tier=3",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec perplexity:google/gemini-3.1-pro-preview --mode read"
+        },
+        {
+          "role": "research_scout",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high"
+          },
+          "score": 13.385,
+          "reasons": [
+            "work_type_fit=5",
+            "quality_tier=5",
+            "cost_tier=2",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read"
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "medium",
+        "review_tier": null,
+        "security_review": false,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 9.8,
+          "reasons": [
+            "work_type_fit=4",
+            "quality_tier=4",
+            "cost_tier=2"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "orchestrator": {
+          "role": "orchestrator_medium",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 11.358,
+          "reasons": [
+            "work_type_fit=5",
+            "quality_tier=4",
+            "cost_tier=4",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "coder": {
+          "role": "coder_medium",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 11.358,
+          "reasons": [
+            "work_type_fit=5",
+            "quality_tier=4",
+            "cost_tier=4",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "reviewer": null,
+        "security_reviewer": null,
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command."
+        ]
+      }
+    },
+    {
+      "name": "code-review-uses-claude-second-opinion",
+      "task": "Review this pull request for architecture risks, hidden regressions, and missing tests.",
+      "flags": {},
+      "work_type": "code_review",
+      "delegate": true,
+      "top_model": "claude/opus",
+      "top_backend": "claude_subscription",
+      "recommended_routes": [
+        {
+          "role": "code_review_second_opinion",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high"
+          },
+          "score": 28.22,
+          "reasons": [
+            "work_type_fit=9",
+            "quality_tier=5",
+            "cost_tier=2",
+            "subscription_second_opinion",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read"
+        },
+        {
+          "role": "code_review_second_opinion",
+          "model": "claude/sonnet",
+          "display_name": "Claude Sonnet via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "claude",
+          "mode": "read",
+          "settings": {
+            "effort": "medium"
+          },
+          "score": 25.735,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=4",
+            "cost_tier=1",
+            "subscription_second_opinion",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec claude --mode read"
+        },
+        {
+          "role": "code_review_second_opinion",
+          "model": "google/gemini-3.1-pro",
+          "display_name": "Gemini 3.1 Pro via Perplexity bridge",
+          "backend": "perplexity",
+          "provider": "google",
+          "route_target": "perplexity:google/gemini-3.1-pro-preview",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 19.99,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=5",
+            "cost_tier=3",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec perplexity:google/gemini-3.1-pro-preview --mode read"
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": false,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 13.8,
+          "reasons": [
+            "work_type_fit=6",
+            "quality_tier=4",
+            "cost_tier=2"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "orchestrator": {
+          "role": "orchestrator_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 19.37,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=5",
+            "cost_tier=5",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "coder": {
+          "role": "coder_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 19.37,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=5",
+            "cost_tier=5",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "reviewer": {
+          "role": "reviewer_production",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high"
+          },
+          "score": 28.22,
+          "reasons": [
+            "work_type_fit=9",
+            "quality_tier=5",
+            "cost_tier=2",
+            "subscription_second_opinion",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read",
+          "available": true
+        },
+        "security_reviewer": null,
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command."
+        ]
+      }
+    },
+    {
+      "name": "long-horizon-coding-uses-deepswe-signal",
+      "task": "Implement a multi-file repository migration with tests across unfamiliar modules.",
+      "flags": {},
+      "work_type": "long_horizon_coding",
+      "delegate": true,
+      "top_model": "openai/gpt-5.5",
+      "top_backend": "codex",
+      "recommended_routes": [
+        {
+          "role": "coding_agent_candidate",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high",
+            "benchmark_setting": "xhigh"
+          },
+          "score": 30.37,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=5",
+            "cost_tier=5",
+            "deepswe_bonus=7.0",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null
+        },
+        {
+          "role": "coding_agent_candidate",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high",
+            "benchmark_setting": "xhigh"
+          },
+          "score": 27.817,
+          "reasons": [
+            "work_type_fit=9",
+            "quality_tier=4",
+            "cost_tier=4",
+            "deepswe_bonus=5.6",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null
+        },
+        {
+          "role": "coding_agent_candidate",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high",
+            "benchmark_setting": "max"
+          },
+          "score": 27.62,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=5",
+            "cost_tier=2",
+            "deepswe_bonus=5.4",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read"
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": false,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 17.8,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=4",
+            "cost_tier=2"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "orchestrator": {
+          "role": "orchestrator_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high",
+            "benchmark_setting": "xhigh"
+          },
+          "score": 30.37,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=5",
+            "cost_tier=5",
+            "deepswe_bonus=7.0",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "coder": {
+          "role": "coder_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high",
+            "benchmark_setting": "xhigh"
+          },
+          "score": 30.37,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=5",
+            "cost_tier=5",
+            "deepswe_bonus=7.0",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "reviewer": {
+          "role": "reviewer_production",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high",
+            "benchmark_setting": "max"
+          },
+          "score": 27.62,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=5",
+            "cost_tier=2",
+            "deepswe_bonus=5.4",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read",
+          "available": true
+        },
+        "security_reviewer": null,
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command."
+        ]
+      }
+    },
+    {
+      "name": "local-private-prefers-local",
+      "task": "Analyze this private local document offline without sending it to an external provider.",
+      "flags": {
+        "privacy": "local_only"
+      },
+      "work_type": "local_private",
+      "delegate": true,
+      "top_model": "lmstudio/local-default",
+      "top_backend": "lmstudio",
+      "recommended_routes": [
+        {
+          "role": "local_private_reader",
+          "model": "lmstudio/local-default",
+          "display_name": "LM Studio local default",
+          "backend": "lmstudio",
+          "provider": "local",
+          "route_target": "local",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "none"
+          },
+          "score": 31.8,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=2",
+            "cost_tier=0",
+            "local_privacy_match"
+          ],
+          "route_command": "codex-model exec local --mode read"
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "medium",
+        "review_tier": null,
+        "security_review": false,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 0.0,
+          "reasons": [],
+          "route_command": null,
+          "available": false,
+          "blocked_reason": "privacy constraint blocks external model"
+        },
+        "orchestrator": {
+          "role": "orchestrator_medium",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 0.0,
+          "reasons": [],
+          "route_command": null,
+          "available": false,
+          "blocked_reason": "privacy constraint blocks external model"
+        },
+        "coder": {
+          "role": "coder_medium",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 0.0,
+          "reasons": [],
+          "route_command": null,
+          "available": false,
+          "blocked_reason": "privacy constraint blocks external model"
+        },
+        "reviewer": null,
+        "security_reviewer": null,
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command.",
+          "Configured coder route is blocked; fall back to the ranked recommendation list."
+        ]
+      }
+    },
+    {
+      "name": "high-risk-avoids-cheapest-route",
+      "task": "Stress test this irreversible production migration plan and identify failure modes.",
+      "flags": {
+        "risk": "high"
+      },
+      "work_type": "high_risk_analysis",
+      "delegate": true,
+      "top_model": "claude/opus",
+      "top_backend": "claude_subscription",
+      "recommended_routes": [
+        {
+          "role": "risk_critic",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high"
+          },
+          "score": 25.385,
+          "reasons": [
+            "work_type_fit=9",
+            "quality_tier=5",
+            "cost_tier=2",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read"
+        },
+        {
+          "role": "risk_critic",
+          "model": "google/gemini-3.1-pro",
+          "display_name": "Gemini 3.1 Pro via Perplexity bridge",
+          "backend": "perplexity",
+          "provider": "google",
+          "route_target": "perplexity:google/gemini-3.1-pro-preview",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 25.215,
+          "reasons": [
+            "work_type_fit=9",
+            "quality_tier=5",
+            "cost_tier=3",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec perplexity:google/gemini-3.1-pro-preview --mode read"
+        },
+        {
+          "role": "risk_critic",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 24.415,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=5",
+            "cost_tier=5",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": false,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 19.0,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=2"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "orchestrator": {
+          "role": "orchestrator_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 24.415,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=5",
+            "cost_tier=5",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "coder": {
+          "role": "coder_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 24.415,
+          "reasons": [
+            "work_type_fit=10",
+            "quality_tier=5",
+            "cost_tier=5",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "reviewer": {
+          "role": "reviewer_production",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high"
+          },
+          "score": 25.385,
+          "reasons": [
+            "work_type_fit=9",
+            "quality_tier=5",
+            "cost_tier=2",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read",
+          "available": true
+        },
+        "security_reviewer": null,
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command."
+        ]
+      }
+    },
+    {
+      "name": "frontend-qa-stays-codex-tools",
+      "task": "Open the local app in the browser, inspect responsive UI behavior, and verify screenshots.",
+      "flags": {},
+      "work_type": "frontend_qa",
+      "delegate": false,
+      "top_model": "parent/codex-default",
+      "top_backend": "codex",
+      "recommended_routes": [
+        {
+          "role": "parent_executor",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 24.8,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=4",
+            "cost_tier=2",
+            "tool_support",
+            "parent_codex_default"
+          ],
+          "route_command": null
+        },
+        {
+          "role": "assistant",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 18.358,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=4",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null
+        },
+        {
+          "role": "assistant",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 17.415,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=5",
+            "cost_tier=5",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "medium",
+        "review_tier": null,
+        "security_review": false,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 24.8,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=4",
+            "cost_tier=2",
+            "tool_support",
+            "parent_codex_default"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "orchestrator": {
+          "role": "orchestrator_medium",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 18.358,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=4",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "coder": {
+          "role": "coder_medium",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 18.358,
+          "reasons": [
+            "work_type_fit=7",
+            "quality_tier=4",
+            "cost_tier=4",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "reviewer": null,
+        "security_reviewer": null,
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command."
+        ]
+      }
+    },
+    {
+      "name": "auth-change-requests-security-review",
+      "task": "Implement OAuth login, API token storage, and permission checks for production.",
+      "flags": {},
+      "work_type": "implementation",
+      "delegate": false,
+      "top_model": "parent/codex-default",
+      "top_backend": "codex",
+      "recommended_routes": [
+        {
+          "role": "parent_executor",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 24.8,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=4",
+            "cost_tier=2",
+            "tool_support",
+            "parent_codex_default"
+          ],
+          "route_command": null
+        },
+        {
+          "role": "assistant",
+          "model": "openai/gpt-5.4",
+          "display_name": "GPT-5.4",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.4",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 23.217,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=4",
+            "cost_tier=4",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null
+        },
+        {
+          "role": "assistant",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 22.37,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=5",
+            "cost_tier=5",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null
+        }
+      ],
+      "model_system_route": {
+        "schema_version": "0.1.0",
+        "enabled": true,
+        "complexity": "high",
+        "review_tier": "production",
+        "security_review": true,
+        "selector": {
+          "role": "selector",
+          "model": "parent/codex-default",
+          "display_name": "Parent Codex",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "parent",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "medium"
+          },
+          "score": 24.8,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=4",
+            "cost_tier=2",
+            "tool_support",
+            "parent_codex_default"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "orchestrator": {
+          "role": "orchestrator_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 22.37,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=5",
+            "cost_tier=5",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "coder": {
+          "role": "coder_high",
+          "model": "openai/gpt-5.5",
+          "display_name": "GPT-5.5",
+          "backend": "codex",
+          "provider": "openai",
+          "route_target": "codex:gpt-5.5",
+          "mode": "read",
+          "settings": {
+            "reasoning_effort": "high"
+          },
+          "score": 22.37,
+          "reasons": [
+            "work_type_fit=8",
+            "quality_tier=5",
+            "cost_tier=5",
+            "tool_support",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": null,
+          "available": true
+        },
+        "reviewer": {
+          "role": "reviewer_production",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high"
+          },
+          "score": 16.22,
+          "reasons": [
+            "work_type_fit=5",
+            "quality_tier=5",
+            "cost_tier=2",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read",
+          "available": true
+        },
+        "security_reviewer": {
+          "role": "security_reviewer",
+          "model": "claude/opus",
+          "display_name": "Claude Opus 4.8 via subscription",
+          "backend": "claude_subscription",
+          "provider": "anthropic",
+          "route_target": "opus",
+          "mode": "read",
+          "settings": {
+            "effort": "high"
+          },
+          "score": 16.22,
+          "reasons": [
+            "work_type_fit=5",
+            "quality_tier=5",
+            "cost_tier=2",
+            "artificial_analysis_intelligence",
+            "artificial_analysis_coding",
+            "artificial_analysis_price"
+          ],
+          "route_command": "codex-model exec opus --mode read",
+          "available": true
+        },
+        "notes": [
+          "Model-system routing is deterministic: complexity, review tier, and security review are derived from task metadata.",
+          "The active executor remains parent Codex unless the operator explicitly runs a returned route command."
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "This file intentionally stores only non-secret benchmark-derived values and route recommendations.",
+    "The Artificial Analysis API key is supplied at runtime and is not stored here.",
+    "Raw Artificial Analysis cache data remains ignored by git.",
+    "Models with proxy_status use a labelled previous-model proxy only until the requested model appears in Artificial Analysis."
+  ]
+}

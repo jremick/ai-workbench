@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "model_system": {
+    "enabled": true,
+    "selector": {
+      "model": "parent/codex-default",
+      "notes": "Deterministic policy selector. Keep parent Codex responsible for final integration and verification."
+    },
+    "orchestrators": {
+      "low": "parent/codex-default",
+      "medium": "openai/gpt-5.4",
+      "high": "openai/gpt-5.5"
+    },
+    "coders": {
+      "low": "parent/codex-default",
+      "medium": "openai/gpt-5.4",
+      "high": "openai/gpt-5.5"
+    },
+    "reviewers": {
+      "play": "claude/sonnet",
+      "production": "claude/opus"
+    },
+    "security_reviewer": "claude/opus"
+  },
+  "notes": [
+    "Use model ids from model_catalog.json.",
+    "The role stack is a public-friendly configuration layer over deterministic routing; it does not execute provider calls automatically."
+  ]
+}

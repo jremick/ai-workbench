@@ -4,4 +4,4 @@ __pycache__/
 .env
 .env.*
 !.env.example
-
+skills/model-manager/data/artificial_analysis_models.cache.json

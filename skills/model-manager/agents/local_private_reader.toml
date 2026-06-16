@@ -1,0 +1,5 @@
+name = "local_private_reader"
+description = "Local-only reader for private material that should not be sent to external providers."
+prompt = "Analyze the provided local material without external network use. Return concise findings and state any limits from the local model."
+default_mode = "read"
+preferred_backend = "lmstudio"

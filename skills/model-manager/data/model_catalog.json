@@ -1,0 +1,395 @@
+{
+  "version": "0.1.3",
+  "last_updated": "2026-05-29",
+  "currency": "USD",
+  "source_notes": [
+    "Artificial Analysis is the preferred live source for general model quality, pricing, speed, and latency.",
+    "DeepSWE is the preferred benchmark signal for long-horizon coding-agent work.",
+    "This committed catalog is a conservative fallback snapshot; refresh live benchmark data before changing global defaults.",
+    "Claude Opus routes target Opus 4.8 and now use direct Artificial Analysis values when the cache includes slug claude-opus-4-8."
+  ],
+  "sources": {
+    "artificial_analysis": {
+      "name": "Artificial Analysis",
+      "url": "https://artificialanalysis.ai/api-reference/",
+      "usage": "General model intelligence, coding index, speed, latency, and pricing when a live API cache is available.",
+      "attribution_required": true,
+      "cache_path": "data/artificial_analysis_models.cache.json"
+    },
+    "deepswe": {
+      "name": "DeepSWE",
+      "url": "https://deepswe.datacurve.ai/",
+      "usage": "Long-horizon software engineering benchmark signal.",
+      "snapshot_date": "2026-05-28"
+    }
+  },
+  "models": [
+    {
+      "id": "parent/codex-default",
+      "display_name": "Parent Codex",
+      "artificial_analysis": {
+        "match": "Codex"
+      },
+      "backend": "codex",
+      "provider": "openai",
+      "route_target": "parent",
+      "available_by_default": true,
+      "supports_tools": true,
+      "supports_live_research": false,
+      "privacy_level": "workspace",
+      "cost_tier": 2,
+      "latency_tier": 2,
+      "quality_tier": 4,
+      "default_settings": {
+        "reasoning_effort": "medium"
+      },
+      "strengths": [
+        "tool_orchestration",
+        "code_editing",
+        "integration",
+        "verification"
+      ],
+      "work_type_scores": {
+        "trivial": 7,
+        "implementation": 8,
+        "code_review": 6,
+        "long_horizon_coding": 8,
+        "research": 4,
+        "docs_writing": 7,
+        "high_risk_analysis": 7,
+        "local_private": 3,
+        "frontend_qa": 8
+      }
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "display_name": "GPT-5.5",
+      "artificial_analysis": {
+        "match": "GPT-5.5"
+      },
+      "backend": "codex",
+      "provider": "openai",
+      "route_target": "codex:gpt-5.5",
+      "available_by_default": false,
+      "supports_tools": true,
+      "supports_live_research": false,
+      "privacy_level": "external",
+      "cost_tier": 5,
+      "latency_tier": 4,
+      "quality_tier": 5,
+      "default_settings": {
+        "reasoning_effort": "high"
+      },
+      "benchmark_scores": {
+        "deepswe": {
+          "score": 70,
+          "ci": 4,
+          "setting": "xhigh"
+        }
+      },
+      "strengths": [
+        "long_horizon_coding",
+        "high_risk_analysis",
+        "architecture",
+        "requirement_completion"
+      ],
+      "work_type_scores": {
+        "trivial": 1,
+        "implementation": 8,
+        "code_review": 8,
+        "long_horizon_coding": 10,
+        "research": 6,
+        "docs_writing": 7,
+        "high_risk_analysis": 10,
+        "local_private": 0,
+        "frontend_qa": 7
+      }
+    },
+    {
+      "id": "openai/gpt-5.4",
+      "display_name": "GPT-5.4",
+      "artificial_analysis": {
+        "match": "GPT-5.4"
+      },
+      "backend": "codex",
+      "provider": "openai",
+      "route_target": "codex:gpt-5.4",
+      "available_by_default": false,
+      "supports_tools": true,
+      "supports_live_research": false,
+      "privacy_level": "external",
+      "cost_tier": 4,
+      "latency_tier": 3,
+      "quality_tier": 4,
+      "default_settings": {
+        "reasoning_effort": "high"
+      },
+      "benchmark_scores": {
+        "deepswe": {
+          "score": 56,
+          "ci": 5,
+          "setting": "xhigh"
+        }
+      },
+      "strengths": [
+        "long_horizon_coding",
+        "balanced_cost_quality",
+        "implementation"
+      ],
+      "work_type_scores": {
+        "trivial": 2,
+        "implementation": 8,
+        "code_review": 7,
+        "long_horizon_coding": 9,
+        "research": 5,
+        "docs_writing": 7,
+        "high_risk_analysis": 8,
+        "local_private": 0,
+        "frontend_qa": 7
+      }
+    },
+    {
+      "id": "openai/gpt-5.4-mini",
+      "display_name": "GPT-5.4 Mini",
+      "artificial_analysis": {
+        "match": "GPT-5.4 Mini"
+      },
+      "backend": "codex",
+      "provider": "openai",
+      "route_target": "codex:gpt-5.4-mini",
+      "available_by_default": false,
+      "supports_tools": true,
+      "supports_live_research": false,
+      "privacy_level": "external",
+      "cost_tier": 1,
+      "latency_tier": 1,
+      "quality_tier": 3,
+      "default_settings": {
+        "reasoning_effort": "low"
+      },
+      "benchmark_scores": {
+        "deepswe": {
+          "score": 24,
+          "ci": 4,
+          "setting": "xhigh"
+        }
+      },
+      "strengths": [
+        "cheap_summarization",
+        "classification",
+        "light_rewrite"
+      ],
+      "work_type_scores": {
+        "trivial": 8,
+        "implementation": 4,
+        "code_review": 4,
+        "long_horizon_coding": 3,
+        "research": 3,
+        "docs_writing": 5,
+        "high_risk_analysis": 3,
+        "local_private": 0,
+        "frontend_qa": 3
+      }
+    },
+    {
+      "id": "claude/sonnet",
+      "display_name": "Claude Sonnet via subscription",
+      "artificial_analysis": {
+        "match": "claude-sonnet-4-6"
+      },
+      "backend": "claude_subscription",
+      "provider": "anthropic",
+      "route_target": "claude",
+      "available_by_default": true,
+      "supports_tools": false,
+      "supports_live_research": false,
+      "privacy_level": "external",
+      "cost_tier": 1,
+      "latency_tier": 2,
+      "quality_tier": 4,
+      "default_settings": {
+        "effort": "medium"
+      },
+      "benchmark_scores": {
+        "deepswe": {
+          "score": 32,
+          "ci": 4,
+          "setting": "high"
+        }
+      },
+      "strengths": [
+        "code_review",
+        "critique",
+        "writing",
+        "second_opinion"
+      ],
+      "work_type_scores": {
+        "trivial": 4,
+        "implementation": 5,
+        "code_review": 8,
+        "long_horizon_coding": 5,
+        "research": 4,
+        "docs_writing": 8,
+        "high_risk_analysis": 7,
+        "local_private": 0,
+        "frontend_qa": 5
+      }
+    },
+    {
+      "id": "claude/opus",
+      "display_name": "Claude Opus 4.8 via subscription",
+      "artificial_analysis": {
+        "match": "claude-opus-4-8"
+      },
+      "backend": "claude_subscription",
+      "provider": "anthropic",
+      "route_target": "opus",
+      "available_by_default": true,
+      "supports_tools": false,
+      "supports_live_research": false,
+      "privacy_level": "external",
+      "cost_tier": 2,
+      "latency_tier": 4,
+      "quality_tier": 5,
+      "default_settings": {
+        "effort": "high"
+      },
+      "benchmark_scores": {
+        "deepswe": {
+          "score": 54,
+          "ci": 5,
+          "setting": "max",
+          "basis": "Claude Opus 4.7 proxy pending Opus 4.8 DeepSWE result"
+        }
+      },
+      "strengths": [
+        "deep_review",
+        "strategic_critique",
+        "alternative_reasoning",
+        "architecture"
+      ],
+      "work_type_scores": {
+        "trivial": 1,
+        "implementation": 5,
+        "code_review": 9,
+        "long_horizon_coding": 8,
+        "research": 5,
+        "docs_writing": 8,
+        "high_risk_analysis": 9,
+        "local_private": 0,
+        "frontend_qa": 5
+      }
+    },
+    {
+      "id": "google/gemini-3.1-pro",
+      "display_name": "Gemini 3.1 Pro via Perplexity bridge",
+      "artificial_analysis": {
+        "match": "gemini-3-1-pro-preview"
+      },
+      "backend": "perplexity",
+      "provider": "google",
+      "route_target": "perplexity:google/gemini-3.1-pro-preview",
+      "available_by_default": true,
+      "supports_tools": false,
+      "supports_live_research": false,
+      "privacy_level": "external",
+      "cost_tier": 3,
+      "latency_tier": 3,
+      "quality_tier": 5,
+      "default_settings": {
+        "reasoning_effort": "high"
+      },
+      "strengths": [
+        "contrarian_analysis",
+        "high_risk_analysis",
+        "multimodal_reasoning",
+        "model_council"
+      ],
+      "work_type_scores": {
+        "trivial": 1,
+        "implementation": 6,
+        "code_review": 7,
+        "long_horizon_coding": 7,
+        "research": 6,
+        "docs_writing": 7,
+        "high_risk_analysis": 9,
+        "local_private": 0,
+        "frontend_qa": 5
+      }
+    },
+    {
+      "id": "perplexity/sonar",
+      "display_name": "Perplexity Sonar",
+      "artificial_analysis": {
+        "match": "sonar"
+      },
+      "backend": "perplexity",
+      "provider": "perplexity",
+      "route_target": "perplexity:perplexity/sonar",
+      "available_by_default": true,
+      "supports_tools": false,
+      "supports_live_research": true,
+      "privacy_level": "external",
+      "cost_tier": 2,
+      "latency_tier": 2,
+      "quality_tier": 4,
+      "default_settings": {
+        "reasoning_effort": "none"
+      },
+      "strengths": [
+        "live_research",
+        "source_discovery",
+        "market_scan",
+        "current_events"
+      ],
+      "work_type_scores": {
+        "trivial": 3,
+        "implementation": 2,
+        "code_review": 3,
+        "long_horizon_coding": 2,
+        "research": 10,
+        "docs_writing": 5,
+        "high_risk_analysis": 6,
+        "local_private": 0,
+        "frontend_qa": 2
+      }
+    },
+    {
+      "id": "lmstudio/local-default",
+      "display_name": "LM Studio local default",
+      "artificial_analysis": {
+        "match": null
+      },
+      "backend": "lmstudio",
+      "provider": "local",
+      "route_target": "local",
+      "available_by_default": false,
+      "supports_tools": false,
+      "supports_live_research": false,
+      "privacy_level": "local",
+      "cost_tier": 0,
+      "latency_tier": 1,
+      "quality_tier": 2,
+      "default_settings": {
+        "reasoning_effort": "none"
+      },
+      "strengths": [
+        "privacy",
+        "offline",
+        "cheap_drafting",
+        "local_triage"
+      ],
+      "work_type_scores": {
+        "trivial": 6,
+        "implementation": 3,
+        "code_review": 3,
+        "long_horizon_coding": 2,
+        "research": 1,
+        "docs_writing": 4,
+        "high_risk_analysis": 2,
+        "local_private": 10,
+        "frontend_qa": 2
+      }
+    }
+  ]
+}

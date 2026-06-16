@@ -36,4 +36,10 @@ For the model-council package, run:
 python3 scripts/validate_model_council_package.py
 ```
 
+For the model-manager package, run:
+
+```bash
+python3 scripts/validate_model_manager_package.py
+```
+
 If no check exists for the changed area, say that in the PR.

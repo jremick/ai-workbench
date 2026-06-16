@@ -44,8 +44,9 @@ Clone the repo and start from the catalog that matches what you want to adapt:
 git clone https://github.com/jremick/ai-workbench.git
 cd ai-workbench
 
-# Optional sanity check for the model-council package and fixtures.
+# Optional sanity checks for the package families with validators.
 python3 scripts/validate_model_council_package.py
+python3 scripts/validate_model_manager_package.py
 ```
 
 Then browse by category:
@@ -54,7 +55,7 @@ Then browse by category:
 | --- | --- | --- |
 | Frameworks | Models and worksheets for thinking about AI adoption, maturity, and operating constraints. | [SMB AI Maturity Model](frameworks/smb-ai-maturity-model/README.md) |
 | Patterns | Reusable workflow shapes for splitting, routing, verifying, and repeating agent work. | [Agent Workflow Patterns](patterns/agent-workflow-patterns/README.md) |
-| Skills | Reusable instructions for recurring agent work: writing, triage, diagramming, auth handling, MCP work, model councils, research, and context boundaries. | [skills](skills/) and [docs/skills.md](docs/skills.md) |
+| Skills | Reusable instructions for recurring agent work: writing, triage, diagramming, auth handling, MCP work, model routing, model councils, research, and context boundaries. | [skills](skills/) and [docs/skills.md](docs/skills.md) |
 | Harnesses | Operating patterns for starting projects, composing nested work, routing verification, and keeping larger agent tasks coherent. | [project-harness-designer](skills/project-harness-designer/README.md), [harness-composer](skills/harness-composer/README.md), [verification-harness-router](skills/verification-harness-router/README.md) |
 | Agents and plugins | Patterns for delegation, sidecar agents, MCP servers, tool boundaries, and context packets. | [nested-agent-orchestrator](skills/nested-agent-orchestrator/README.md), [mcp-build](skills/mcp-build/README.md), [context-boundary-designer](skills/context-boundary-designer/README.md) |
 | Benchmarks | Dataset prep and scoring harnesses for evaluating skills and agent workflows. | [Model Council DRACO Benchmark](benchmarks/model-council-draco/README.md) |
@@ -75,6 +76,10 @@ Most artifacts have their own README with usage notes, examples, and the smalles
 ### Model Council and Deep Research
 
 [Model Council](skills/model-council/README.md) runs independent model workers and a separate synthesis pass, with local CLI routes for Codex, Claude Code, Antigravity, and Grok Build plus a Vercel AI Gateway option. [Deep Research](skills/deep-research/README.md) keeps source-backed research disciplined and escalates difficult synthesis to the council pattern. The companion [runner](tools/model-council-runner/README.md) supports dry-run planning, manifests, and route validation. [Model Council DRACO Benchmark](benchmarks/model-council-draco/README.md) is a separate benchmark package for evaluating the council skill.
+
+### Model Manager
+
+[Model Manager](skills/model-manager/README.md) is a public-alpha skill and deterministic CLI for choosing when model delegation is worthwhile, selecting a role-stack route, and preserving parent-owned execution. It includes sanitized benchmark-derived recommendation values, Artificial Analysis attribution notes, DeepSWE-aware long-horizon coding policy, evals, tests, and a package validator.
 
 ### War Council
 
@@ -102,6 +107,7 @@ The meta-harness pieces are for shaping larger agent workflows: [Harness Compose
 - [Patterns](patterns/README.md) - reusable workflow shapes.
 - [Resources](resources/README.md) - starter kits, templates, and reference material.
 - [Model Council and Deep Research](docs/model-council-and-deep-research.md) - council workflow, routing, and benchmark notes.
+- [Model Manager](skills/model-manager/README.md) - role-based model routing, benchmark-aware policy, and validation commands.
 
 ## Community and support
 

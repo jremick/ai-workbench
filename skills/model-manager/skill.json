@@ -1,0 +1,9 @@
+{
+  "name": "model-manager",
+  "version": "0.2.0",
+  "description": "Role-based, benchmark-aware model delegation, cost optimization, and provider routing for Codex.",
+  "entrypoint": "SKILL.md",
+  "status": "public-alpha",
+  "license": "Apache-2.0",
+  "last_updated": "2026-06-16"
+}
