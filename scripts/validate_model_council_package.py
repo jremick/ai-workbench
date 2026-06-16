@@ -90,14 +90,12 @@ def check_forbidden_patterns(errors: list[str]) -> None:
 def check_runner(errors: list[str]) -> None:
     runner = ROOT / "tools" / "model-council-runner" / "scripts" / "council_runner.py"
     task = ROOT / "tools" / "model-council-runner" / "fixtures" / "smoke-task.json"
-    configs = [
-        ROOT / "tools" / "model-council-runner" / "configs" / "local-cli.base.json",
-        ROOT / "tools" / "model-council-runner" / "configs" / "vercel-gateway.base.json",
-    ]
-    for config in configs:
-        code, stdout, stderr = run(["python3", str(runner), "validate", "--config", str(config), "--task", str(task)])
-        if code != 0:
-            errors.append(f"runner validate failed for {relative(config)}: {stdout}{stderr}")
+    local_config = ROOT / "tools" / "model-council-runner" / "configs" / "local-cli.base.json"
+    gateway_config = ROOT / "tools" / "model-council-runner" / "configs" / "vercel-gateway.base.json"
+
+    code, stdout, stderr = run(["python3", str(runner), "validate", "--config", str(gateway_config), "--task", str(task)])
+    if code != 0:
+        errors.append(f"runner validate failed for {relative(gateway_config)}: {stdout}{stderr}")
 
     with tempfile.TemporaryDirectory(prefix="model-council-validate-") as tmp:
         run_dir = Path(tmp) / "plan"
@@ -107,7 +105,7 @@ def check_runner(errors: list[str]) -> None:
                 str(runner),
                 "plan",
                 "--config",
-                str(configs[0]),
+                str(local_config),
                 "--task",
                 str(task),
                 "--run-dir",
