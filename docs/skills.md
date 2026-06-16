@@ -1,7 +1,7 @@
 # Skills
 
-Version: 0.3.1
-Last updated: 2026-06-16
+Version: 0.3.2
+Last updated: 2026-06-17
 
 This directory collects installable agent skills that are intended to be useful outside any private workspace.
 
@@ -17,6 +17,7 @@ Each public skill should include:
 | --- | --- | --- |
 | [What's The Point](../skills/whats-the-point/README.md) | Distilling dense material into decision-ready signal. | A practical, easy-to-test skill with evaluation coverage. |
 | [Make My Point](../skills/make-my-point/README.md) | Sharpening rough writing for a specific audience and decision. | Pairs with What's The Point as an evaluated communication workflow. |
+| [Harness-First Project Coach](../skills/harness-first-project-coach/README.md) | Clarifying substantial AI or software starts before implementation. | Adds Q&A, support-skill selection, context boundaries, and a first-lane evidence loop before building. |
 | [Project Harness Designer](../skills/project-harness-designer/README.md) | Starting substantial projects with intent, proof, risks, and a first execution path. | A reusable operating pattern for agent-assisted project starts. |
 | [Deterministic Controls](../skills/deterministic-controls/README.md) | Deciding which agent behavior belongs in code, schemas, gates, and tests. | A reliability skill with a portable eval harness. |
 | [Model Council](../skills/model-council/README.md) | Running independent model workers and synthesizing their outputs with disagreement preserved. | Generalizes a multi-model council pattern with deterministic local CLI and hosted API routes. |

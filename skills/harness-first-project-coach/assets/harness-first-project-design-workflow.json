@@ -1,0 +1,201 @@
+{
+  "title": "Harness-First Project Design",
+  "subtitle": "Clarify, choose support, and design the operating harness before implementation",
+  "direction": "horizontal",
+  "lanes": [
+    {
+      "id": "human",
+      "label": "Human / Team",
+      "actor_type": "human"
+    },
+    {
+      "id": "agent",
+      "label": "AI Agent",
+      "actor_type": "agent"
+    },
+    {
+      "id": "system",
+      "label": "Evidence",
+      "actor_type": "system"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "goal",
+      "label": "High\nGoal",
+      "lane": "human",
+      "node_type": "start",
+      "column": 0
+    },
+    {
+      "id": "altitude",
+      "label": "Diagnose\nAltitude",
+      "lane": "agent",
+      "node_type": "process",
+      "column": 2
+    },
+    {
+      "id": "qa",
+      "label": "Clarify\nQ&A",
+      "lane": "human",
+      "node_type": "hitl_gate",
+      "column": 1
+    },
+    {
+      "id": "source",
+      "label": "Read\nSource",
+      "lane": "agent",
+      "node_type": "process",
+      "column": 3
+    },
+    {
+      "id": "support",
+      "label": "Map\nSupport",
+      "lane": "agent",
+      "node_type": "subprocess",
+      "column": 4
+    },
+    {
+      "id": "boundary",
+      "label": "Set\nBoundaries",
+      "lane": "human",
+      "node_type": "hitl_gate",
+      "column": 5
+    },
+    {
+      "id": "harness",
+      "label": "Design\nHarness",
+      "lane": "agent",
+      "node_type": "subprocess",
+      "column": 6
+    },
+    {
+      "id": "lane",
+      "label": "Approve\nFirst Lane",
+      "lane": "human",
+      "node_type": "hitl_gate",
+      "column": 7
+    },
+    {
+      "id": "execute",
+      "label": "Plan Execute\nVerify",
+      "lane": "agent",
+      "node_type": "subprocess",
+      "column": 8
+    },
+    {
+      "id": "evidence",
+      "label": "Evidence\nGates",
+      "lane": "system",
+      "node_type": "process",
+      "column": 9
+    },
+    {
+      "id": "good",
+      "label": "Good\nEnough?",
+      "lane": "human",
+      "node_type": "decision",
+      "column": 10
+    },
+    {
+      "id": "learn",
+      "label": "Capture\nLearning",
+      "lane": "system",
+      "node_type": "process",
+      "column": 11
+    },
+    {
+      "id": "ready",
+      "label": "Next",
+      "lane": "system",
+      "node_type": "end",
+      "column": 12
+    }
+  ],
+  "edges": [
+    {
+      "from": "goal",
+      "to": "qa",
+      "label": "",
+      "edge_type": "normal"
+    },
+    {
+      "from": "qa",
+      "to": "altitude",
+      "label": "Clear",
+      "edge_type": "approval"
+    },
+    {
+      "from": "altitude",
+      "to": "source",
+      "label": "",
+      "edge_type": "normal"
+    },
+    {
+      "from": "source",
+      "to": "support",
+      "label": "",
+      "edge_type": "normal"
+    },
+    {
+      "from": "support",
+      "to": "boundary",
+      "label": "",
+      "edge_type": "normal"
+    },
+    {
+      "from": "boundary",
+      "to": "harness",
+      "label": "Clear",
+      "edge_type": "approval"
+    },
+    {
+      "from": "harness",
+      "to": "lane",
+      "label": "",
+      "edge_type": "normal"
+    },
+    {
+      "from": "lane",
+      "to": "execute",
+      "label": "Approved",
+      "edge_type": "approval"
+    },
+    {
+      "from": "execute",
+      "to": "evidence",
+      "label": "",
+      "edge_type": "normal"
+    },
+    {
+      "from": "evidence",
+      "to": "good",
+      "label": "Proof",
+      "edge_type": "normal"
+    },
+    {
+      "from": "good",
+      "to": "learn",
+      "label": "Yes",
+      "edge_type": "approval"
+    },
+    {
+      "from": "learn",
+      "to": "ready",
+      "label": "",
+      "edge_type": "normal"
+    },
+    {
+      "from": "good",
+      "to": "harness",
+      "label": "Revise",
+      "edge_type": "feedback"
+    },
+    {
+      "from": "boundary",
+      "to": "qa",
+      "label": "Unclear",
+      "edge_type": "feedback"
+    }
+  ]
+}

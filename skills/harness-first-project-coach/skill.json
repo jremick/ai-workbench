@@ -1,0 +1,9 @@
+{
+  "name": "harness-first-project-coach",
+  "version": "1.1.2",
+  "description": "A coaching skill for clarifying substantial AI or software starts before implementation: goal altitude, source grounding, support-skill selection, context boundary, minimum harness, first lane, verification, and reusable learning.",
+  "entrypoint": "SKILL.md",
+  "status": "public-alpha",
+  "license": "Apache-2.0",
+  "last_updated": "2026-06-17"
+}
