@@ -11,7 +11,7 @@ Where a skill belongs and when a model sees it are different decisions.
 | Router-retrievable | Can the active host, profile, or router resolve it when a matching task arrives? |
 | Activated | Has the host loaded the complete workflow for this task? |
 
-OpenAI's skill guidance describes progressive disclosure: the host starts with skill metadata and loads the complete instructions when the user invokes the skill or the request matches its description. It also distinguishes repository, user, admin, and system authoring locations. See [Build skills](https://learn.chatgpt.com/docs/build-skills).
+OpenAI's skill guidance describes progressive disclosure: the host starts with skill metadata and loads the complete instructions when the user invokes the skill or the request matches its description. See [Build skills](https://developers.openai.com/codex/skills).
 
 This repository adds a public architectural recommendation: keep the prompt-visible set small, use domain routers for broad intent, and keep specialized leaves retrievable or explicit-use until activation.
 
@@ -34,7 +34,9 @@ Plugin and provider packages can contribute many installed skill files. Installe
 
 Use profile or host controls to disable or de-prioritize unwanted surfaces. Do not delete provider caches as a substitute for routing policy, and never publish cached provider bodies as if they were locally owned artifacts.
 
-Plugins are the current OpenAI distribution unit for reusable skills and optional MCP integrations. A skill provides workflow instructions; an MCP server provides live data, authentication, authorization, and controlled actions. See [Skills in plugins](https://developers.openai.com/plugins/concepts/skills) and [Package a plugin](https://developers.openai.com/plugins/build/plugins).
+Plugins are the current OpenAI distribution unit for reusable skills and optional connectors. A skill provides workflow instructions; an MCP server can provide live data, authentication, authorization, and controlled actions. See [Build skills](https://developers.openai.com/codex/skills) and [Build plugins](https://developers.openai.com/codex/build-plugins).
+
+For the expanded five-dimension model, see [Ownership, availability, awareness, and activation](ownership-availability-awareness.md).
 
 ## Public claim boundary
 

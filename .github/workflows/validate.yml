@@ -24,6 +24,15 @@ jobs:
       - name: Verify generated public catalog
         run: python3 scripts/render_public_catalog.py --check
 
+      - name: Validate synthetic reference architecture
+        run: python3 scripts/validate_reference.py
+
+      - name: Verify generated synthetic route map
+        run: python3 scripts/render_route_maps.py --check
+
+      - name: Validate portable skill packages
+        run: python3 scripts/validate_portable_skill_packages.py
+
       - name: Check local Markdown links
         run: python3 scripts/check_markdown_links.py
 

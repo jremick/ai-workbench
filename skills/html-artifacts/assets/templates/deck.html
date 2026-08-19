@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$title</title>
+  <style>
+    $css
+    body { background:#11100f; color:#f8f3ed; overflow:hidden; }
+    .deck { height:100vh; }
+    .slide { display:none; min-height:100vh; padding:8vh 9vw; align-items:center; justify-content:center; flex-direction:column; text-align:left; }
+    .slide.active { display:flex; }
+    .slide h1 { max-width:14ch; font-size:clamp(42px,8vw,92px); }
+    .slide p { max-width:760px; color:#d8d0c6; font-size:clamp(22px,3vw,36px); margin-top:22px; }
+    .counter { position:fixed; right:24px; bottom:20px; color:#b8aea1; font:14px var(--mono); }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="$title">
+    $slides_html
+  </main>
+  <div class="counter"><span id="i">1</span> / <span id="n">1</span></div>
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const index = document.getElementById('i');
+    const total = document.getElementById('n');
+    total.textContent = String(slides.length);
+    let current = Math.max(0, slides.findIndex(s => s.classList.contains('active')));
+    function show(next) {
+      current = Math.max(0, Math.min(slides.length - 1, next));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      index.textContent = String(current + 1);
+    }
+    document.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight' || event.key === ' ') show(current + 1);
+      if (event.key === 'ArrowLeft') show(current - 1);
+      if (event.key.toLowerCase() === 'f') document.documentElement.requestFullscreen?.();
+    });
+    show(current);
+  </script>
+</body>
+</html>

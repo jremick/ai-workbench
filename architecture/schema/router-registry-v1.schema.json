@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jremick/ai-workbench/blob/main/architecture/schema/router-registry-v1.schema.json",
+  "title": "AI Workbench synthetic router registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "reference_only", "routers", "skills", "profiles"],
+  "properties": {
+    "$schema": {
+      "const": "../schema/router-registry-v1.schema.json"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "reference_only": {
+      "const": true
+    },
+    "routers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "description", "routes"],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "routes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["intent", "target", "side_effect"],
+              "properties": {
+                "intent": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "target": {
+                  "$ref": "#/$defs/id"
+                },
+                "side_effect": {
+                  "enum": ["read-only", "reversible-write", "external-write"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "ownership", "awareness"],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ownership": {
+            "enum": ["shared", "personal", "work"]
+          },
+          "awareness": {
+            "enum": ["direct-visible", "router-aware", "direct-call-aware", "not-aware"]
+          }
+        }
+      }
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "allowed_ownership", "enabled_skills"],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "allowed_ownership": {
+            "type": "array",
+            "items": {
+              "enum": ["shared", "personal", "work"]
+            },
+            "uniqueItems": true
+          },
+          "enabled_skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/id"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    }
+  }
+}

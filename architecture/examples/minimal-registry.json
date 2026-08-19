@@ -1,0 +1,151 @@
+{
+  "$schema": "../schema/router-registry-v1.schema.json",
+  "schema_version": 1,
+  "reference_only": true,
+  "routers": [
+    {
+      "id": "agent-operations",
+      "title": "Agent operations",
+      "description": "Routes durable agent instructions, decisions, context, and workflow-governance work.",
+      "routes": [
+        {
+          "intent": "record or revisit a material decision",
+          "target": "decision-journal",
+          "side_effect": "reversible-write"
+        }
+      ]
+    },
+    {
+      "id": "knowledge-communication",
+      "title": "Knowledge and communication",
+      "description": "Routes research, synthesis, writing, and communication work.",
+      "routes": [
+        {
+          "intent": "prepare a source-backed evidence brief",
+          "target": "evidence-brief",
+          "side_effect": "read-only"
+        }
+      ]
+    },
+    {
+      "id": "artifact-production",
+      "title": "Artifact production",
+      "description": "Routes reports, documents, diagrams, and other human-facing artifacts.",
+      "routes": [
+        {
+          "intent": "create an accessible review report",
+          "target": "accessible-report",
+          "side_effect": "reversible-write"
+        }
+      ]
+    },
+    {
+      "id": "engineering-delivery",
+      "title": "Engineering delivery",
+      "description": "Routes repository, implementation, review, QA, security, and release-readiness work.",
+      "routes": [
+        {
+          "intent": "assess a repository before public alpha",
+          "target": "repo-readiness",
+          "side_effect": "read-only"
+        }
+      ]
+    },
+    {
+      "id": "connected-systems",
+      "title": "Connected systems",
+      "description": "Routes work involving task trackers, mail, knowledge systems, and publishing surfaces.",
+      "routes": [
+        {
+          "intent": "triage a synthetic task-tracker queue",
+          "target": "tracker-triage",
+          "side_effect": "external-write"
+        }
+      ]
+    },
+    {
+      "id": "tooling-platforms",
+      "title": "Tooling and platforms",
+      "description": "Routes model providers, authentication, browser control, hosting, and infrastructure capabilities.",
+      "routes": [
+        {
+          "intent": "select a model provider for a bounded evaluation",
+          "target": "provider-selector",
+          "side_effect": "read-only"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "decision-journal",
+      "title": "Decision journal",
+      "ownership": "shared",
+      "awareness": "router-aware"
+    },
+    {
+      "id": "evidence-brief",
+      "title": "Evidence brief",
+      "ownership": "shared",
+      "awareness": "router-aware"
+    },
+    {
+      "id": "accessible-report",
+      "title": "Accessible report",
+      "ownership": "shared",
+      "awareness": "router-aware"
+    },
+    {
+      "id": "repo-readiness",
+      "title": "Repository readiness",
+      "ownership": "shared",
+      "awareness": "router-aware"
+    },
+    {
+      "id": "tracker-triage",
+      "title": "Task-tracker triage",
+      "ownership": "work",
+      "awareness": "router-aware"
+    },
+    {
+      "id": "provider-selector",
+      "title": "Provider selector",
+      "ownership": "personal",
+      "awareness": "router-aware"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "reviewer",
+      "allowed_ownership": ["shared"],
+      "enabled_skills": [
+        "decision-journal",
+        "evidence-brief",
+        "accessible-report",
+        "repo-readiness"
+      ]
+    },
+    {
+      "id": "operator",
+      "allowed_ownership": ["shared", "work"],
+      "enabled_skills": [
+        "decision-journal",
+        "evidence-brief",
+        "accessible-report",
+        "repo-readiness",
+        "tracker-triage"
+      ]
+    },
+    {
+      "id": "creator",
+      "allowed_ownership": ["shared", "personal"],
+      "enabled_skills": [
+        "decision-journal",
+        "evidence-brief",
+        "accessible-report",
+        "repo-readiness",
+        "provider-selector"
+      ]
+    }
+  ]
+}

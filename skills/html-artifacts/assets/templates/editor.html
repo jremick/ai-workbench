@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$title</title>
+  <style>$css</style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div class="eyebrow">$eyebrow</div>
+      <h1>$title</h1>
+      <p class="summary">$summary</p>
+      <p class="source-note">$source_note · Generated $generated_at</p>
+    </header>
+    <section class="panel">
+      $editor_body_html
+      <div class="toolbar">
+        <button id="copyExport">Copy export</button>
+        <button class="secondary" id="refreshExport">Refresh export</button>
+      </div>
+      <output id="exportOutput" class="export-box"></output>
+    </section>
+  </main>
+  <script>
+    $data_js
+    function buildExport() {
+      $export_js
+    }
+    function refreshExport() {
+      document.getElementById('exportOutput').textContent = buildExport();
+    }
+    document.getElementById('refreshExport').addEventListener('click', refreshExport);
+    document.getElementById('copyExport').addEventListener('click', async () => {
+      refreshExport();
+      const text = document.getElementById('exportOutput').textContent;
+      try { await navigator.clipboard.writeText(text); } catch (_) {}
+    });
+    refreshExport();
+  </script>
+</body>
+</html>

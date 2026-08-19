@@ -30,7 +30,7 @@ AI Workbench collects public-safe agent artifacts: skills, workflow patterns, pr
 The repository has two jobs:
 
 1. Publish maintained examples and reusable public projections.
-2. Explain an architecture for keeping large skill libraries discoverable without injecting every workflow into every prompt.
+2. Provide a synthetic, validated reference architecture for keeping large skill libraries discoverable without injecting every workflow into every prompt.
 
 It intentionally does not publish raw live profiles, personal or work-only skills, provider caches, credentials, account state, memory, sessions, transcripts, or machine-specific configuration.
 
@@ -46,7 +46,7 @@ AI Workbench public source
 reviewed public artifacts
 ```
 
-The canonical public lifecycle record is [catalog/artifacts.json](catalog/artifacts.json). The readable [skills catalog](docs/skills.md) is generated from it.
+The canonical skill lifecycle record is [catalog/artifacts.json](catalog/artifacts.json). The readable [skills catalog](docs/skills.md) is generated from it. Synthetic architecture artifacts have a separate [architecture catalog](catalog/architecture-artifacts.json) so they cannot be confused with installable skills or live configuration.
 
 Public artifacts use four classes:
 
@@ -65,6 +65,9 @@ cd ai-workbench
 
 python3 scripts/validate_public_catalog.py
 python3 scripts/render_public_catalog.py --check
+python3 scripts/validate_reference.py
+python3 scripts/render_route_maps.py --check
+python3 scripts/validate_portable_skill_packages.py
 python3 scripts/check_markdown_links.py
 python3 scripts/check_public_boundaries.py
 ```
@@ -73,8 +76,8 @@ Then browse by category:
 
 | Group | What's in it | Start here |
 | --- | --- | --- |
-| Reference architecture | Progressive disclosure, lifecycle, ownership/visibility, and router patterns | [Architecture](docs/architecture/README.md) |
-| Skills | All 19 packages, classified by public role and evidence | [Public skill catalog](docs/skills.md) |
+| Reference architecture | Synthetic registry, profiles, six routers, lifecycle, validation, and claim limits | [Architecture](docs/architecture/README.md) |
+| Skills | All 25 packages, classified by public role and evidence | [Public skill catalog](docs/skills.md) |
 | Frameworks | Models and worksheets for adoption, maturity, and operating constraints | [SMB AI Maturity Model](frameworks/smb-ai-maturity-model/README.md) |
 | Patterns | Workflow shapes for splitting, routing, verifying, and repeating work | [Agent Workflow Patterns](patterns/agent-workflow-patterns/README.md) |
 | Tools | Deterministic starter kits and runners | [Agent Memory Starter](tools/agent-memory-starter/README.md), [Model Council Runner](tools/model-council-runner/README.md) |
@@ -90,7 +93,7 @@ mkdir -p .agents/skills
 cp -R skills/war-council .agents/skills/
 ```
 
-Other hosts may use different directories or packaging. OpenAI currently recommends plugins when distributing reusable skills beyond local or repository authoring; this repository does not yet publish a plugin. See [OpenAI's skill guidance](https://learn.chatgpt.com/docs/build-skills).
+Other hosts may use different directories or packaging. OpenAI currently describes skills as the workflow authoring format and plugins as the installation path for reusable distribution; this repository does not yet publish a plugin. See [OpenAI's skill guidance](https://developers.openai.com/codex/skills).
 
 Structural validation confirms the public file contract. It does not establish that a skill is useful for a particular task, safe for every environment, compatible with every host, or behaviorally accepted. Run package-specific checks and review tool, auth, model, and MCP assumptions before use.
 
@@ -114,6 +117,9 @@ The default checks cover:
 - manifest and skill-directory coherence;
 - current public `SKILL.md` frontmatter rules;
 - generated catalog drift;
+- synthetic registry, profile, router-template, and architecture-catalog coherence;
+- six positive structural route cases and nine negative mutation contracts;
+- deterministic smoke tests for the new portable skill helpers;
 - relative Markdown links and images;
 - narrow current-tree private-path and secret-pattern checks;
 - selected package validators, tests, fixtures, and documented eval cases.
@@ -123,6 +129,8 @@ Package-specific checks include:
 ```bash
 python3 scripts/validate_model_council_package.py
 python3 scripts/validate_model_manager_package.py
+python3 scripts/validate_reference.py
+python3 scripts/validate_portable_skill_packages.py
 python3 tools/agent-memory-starter/scripts/run_fixture_eval.py
 python3 skills/deterministic-controls/scripts/run_evals.py
 python3 skills/war-council/scripts/war_council.py self-test
@@ -142,6 +150,9 @@ These checks have bounded claims. In particular, package-authored fixtures are n
 
 - [Public skill catalog](docs/skills.md) — all packages, classifications, versions, relationships, and evidence.
 - [Reference architecture](docs/architecture/README.md) — publication boundaries and update flow.
+- [Official versus reference behavior](docs/architecture/official-vs-reference.md) — current product facts separated from AI Workbench recommendations.
+- [Router and registry model](docs/architecture/router-and-registry-model.md) — synthetic schema, generator, fixtures, and contracts.
+- [Distribution and claim limits](docs/architecture/distribution-and-claim-limits.md) — publication lanes and governance.
 - [Skill lifecycle](docs/architecture/skill-lifecycle.md) — classes, relationships, and transitions.
 - [Ownership and visibility](docs/architecture/ownership-and-visibility.md) — installed, visible, retrievable, and activated states.
 - [Patterns](patterns/README.md) — reusable workflow shapes.

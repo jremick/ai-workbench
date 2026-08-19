@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "reference_only": true,
+  "cases": [
+    {
+      "id": "agent-operations-decision",
+      "prompt": "Record a durable decision and its alternatives.",
+      "expected_router": "agent-operations",
+      "expected_target": "decision-journal"
+    },
+    {
+      "id": "knowledge-evidence",
+      "prompt": "Prepare a source-backed evidence brief.",
+      "expected_router": "knowledge-communication",
+      "expected_target": "evidence-brief"
+    },
+    {
+      "id": "artifact-report",
+      "prompt": "Create an accessible review report.",
+      "expected_router": "artifact-production",
+      "expected_target": "accessible-report"
+    },
+    {
+      "id": "engineering-readiness",
+      "prompt": "Assess this repository before public alpha.",
+      "expected_router": "engineering-delivery",
+      "expected_target": "repo-readiness"
+    },
+    {
+      "id": "connected-triage",
+      "prompt": "Triage a synthetic task-tracker queue.",
+      "expected_router": "connected-systems",
+      "expected_target": "tracker-triage"
+    },
+    {
+      "id": "tooling-provider",
+      "prompt": "Select a model provider for a bounded evaluation.",
+      "expected_router": "tooling-platforms",
+      "expected_target": "provider-selector"
+    }
+  ]
+}

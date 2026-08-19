@@ -28,15 +28,19 @@ Keep pull requests narrow:
 1. Explain the artifact or workflow you are changing.
 2. State whether the change affects publication class, public safety, structural compatibility, or verification.
 3. Update `catalog/artifacts.json` when lifecycle, version, relationship, or validation evidence changes.
-4. Regenerate `docs/skills.md` with `python3 scripts/render_public_catalog.py`.
-5. Run the default checks and the relevant package-specific checks.
-6. Include before/after context for documentation rewrites.
+4. Update `catalog/architecture-artifacts.json` when a synthetic architecture artifact changes.
+5. Regenerate `docs/skills.md` and the synthetic route map.
+6. Run the default checks and the relevant package-specific checks.
+7. Include before/after context for documentation rewrites.
 
 Run the default public-repository checks:
 
 ```bash
 python3 scripts/validate_public_catalog.py
 python3 scripts/render_public_catalog.py --check
+python3 scripts/validate_reference.py
+python3 scripts/render_route_maps.py --check
+python3 scripts/validate_portable_skill_packages.py
 python3 scripts/check_markdown_links.py
 python3 scripts/check_public_boundaries.py
 ```

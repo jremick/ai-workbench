@@ -1,6 +1,6 @@
 # Harness-First Project Coach
 
-> **Status: Current public snapshot.** This package is structurally current in AI Workbench; a newer working variant may exist, so the version and comparison date remain explicit in the catalog.
+> **Status: Curated public projection.** This package is a sanitized public edition; a newer working variant exists with environment-specific support metadata, so no live-parity claim is made.
 
 `harness-first-project-coach` helps an agent clarify a substantial project before implementation.
 
