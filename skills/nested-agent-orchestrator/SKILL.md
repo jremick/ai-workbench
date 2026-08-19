@@ -1,9 +1,7 @@
 ---
 name: nested-agent-orchestrator
 description: Use when a task may benefit from sub-agents, sidecar models, parallel reviewers, delegated implementation, independent verification, or nested agent workflows. This skill decides whether to delegate, defines each agent contract, limits context and permissions, and keeps the parent agent responsible for integration, verification, and final claims.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Nested Agent Orchestrator

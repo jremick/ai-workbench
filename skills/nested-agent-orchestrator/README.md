@@ -1,5 +1,7 @@
 # Nested Agent Orchestrator
 
+> **Status: Superseded public snapshot.** This standalone pattern is retained for reference. Current hosts may provide native delegation, but the parent still owns context boundaries, integration, and verification.
+
 `nested-agent-orchestrator` helps decide when to use sub-agents or sidecar models, and how to keep them bounded.
 
 It is for agentic work where parallel exploration, independent review, or delegated implementation could help, but only if the parent agent keeps ownership of integration and verification.
@@ -12,15 +14,15 @@ This skill creates delegation contracts: which agents should run, what each may 
 
 It does not require delegation. It does not make child agents authoritative. It does not replace context design, harness composition, or final verification.
 
-## Install
+## Historical package layout
 
-Copy this directory into your agent skill directory:
+The retained standalone package uses this layout:
 
 ```text
 skills/nested-agent-orchestrator/
 ```
 
-The minimum install is `SKILL.md`. Keep `evals/cases.json` for example prompts.
+Study `SKILL.md` with `evals/cases.json` for example prompts. Prefer current host-native delegation rules for execution.
 
 ## Try It
 

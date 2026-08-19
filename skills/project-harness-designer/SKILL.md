@@ -1,9 +1,7 @@
 ---
 name: project-harness-designer
-description: Use whenever the user starts a new project, initiative, repo, app, tool, research effort, reusable skill, local integration, or other substantial build by giving a goal, desired outcome, constraints, requirements, success criteria, or what good looks like. Design the smallest effective project operating harness before execution: intent, success evidence, failure modes, work mode, structure, verification loop, and first execution path.
-version: 0.4.0
-last_updated: 2026-06-04
-status: public-ready
+description: "Use whenever the user starts a new project, initiative, repo, app, tool, research effort, reusable skill, local integration, or other substantial build by giving a goal, desired outcome, constraints, requirements, success criteria, or what good looks like. Design the smallest effective project operating harness before execution: intent, success evidence, failure modes, work mode, structure, verification loop, and first execution path."
+license: Apache-2.0
 ---
 
 # Project Harness Designer

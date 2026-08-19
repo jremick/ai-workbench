@@ -1,5 +1,7 @@
 # SMB AI Maturity Assessor
 
+> **Status: Illustrative public example.** This assessment workflow accompanies the public framework. It does not provide certification or prove organizational maturity.
+
 `smb-ai-maturity-assessor` applies the companion SMB AI Maturity Model to a company, team, function, or workflow.
 
 Use it when someone asks where they are in AI maturity, what is blocking the next level, or what to do next.

@@ -1,5 +1,7 @@
 # Model Manager
 
+> **Status: Curated public projection.** The deterministic package validates locally, but its model catalog and benchmark inputs are dated fixtures, not evergreen provider recommendations or a live routing snapshot.
+
 Version: 0.2.0
 Last updated: 2026-06-16
 
@@ -7,9 +9,9 @@ Model Manager is a standalone Codex skill for role-based, benchmark-aware model 
 
 It is a policy layer above provider execution. It decides whether a task is worth delegating, chooses a model/settings route using task class plus benchmark and cost signals, and keeps non-default provider execution explicit through a router command.
 
-## Status
+## Scope
 
-Public alpha. The skill, deterministic recommender, route data, evals, and tests are usable, but model catalogs and benchmark-derived scores should be treated as policy fixtures rather than universal model rankings.
+The skill, deterministic recommender, route data, evals, and tests form a public-alpha reference package. Model catalogs and benchmark-derived scores must be treated as dated policy fixtures rather than universal model rankings.
 
 This package is distributed under the repository's Apache-2.0 license.
 

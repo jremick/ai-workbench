@@ -1,9 +1,7 @@
 ---
 name: smb-ai-maturity-assessor
 description: Assess an SMB team, function, or workflow against the SMB AI Maturity Model and recommend the next capability move. Use when the user asks where a business, team, function, or workflow sits in AI maturity, what is blocking the next level, or what to do next.
-version: 0.1.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # SMB AI Maturity Assessor

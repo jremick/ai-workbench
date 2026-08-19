@@ -1,9 +1,7 @@
 ---
 name: context-boundary-designer
 description: Use when an agentic task needs clear boundaries for what context belongs in the parent prompt, child agents, sidecar models, memory, docs, evals, public artifacts, or final answers. This skill prevents context bloat and private-context leakage by classifying sources, sensitivity, provenance, retention, and allowed use before work is delegated or published.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Context Boundary Designer

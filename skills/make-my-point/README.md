@@ -1,5 +1,7 @@
 # Make My Point
 
+> **Status: Curated public projection.** This package keeps the portable writing workflow while excluding private examples and voice overlays.
+
 `make-my-point` is a skill for sharpening rough writing into a clear, audience-aware message.
 
 It pairs naturally with `whats-the-point`: use `whats-the-point` to understand source material, then use `make-my-point` to shape the outgoing message.

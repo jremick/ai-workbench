@@ -1,6 +1,7 @@
 ---
 name: war-council
 description: "Use for high-stakes or uncomfortable decisions that need structured advisor personas, adversarial challenge, weighted tradeoff scoring, forced budget allocation, agreement/disagreement tracking, and an auditable decision ledger. Trigger when the user asks for a war council, advisor council, ruthless CFO/operator/customer-rep review, decision debate, forced prioritization, tradeoff call, uncomfortable recommendation, or a $100/$1000-style allocation across options. Do not use for ordinary brainstorming, simple summaries, copyediting, or low-stakes preference lists."
+license: Apache-2.0
 ---
 
 # War Council

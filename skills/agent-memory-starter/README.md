@@ -1,5 +1,7 @@
 # Agent Memory Starter
 
+> **Status: Illustrative public example.** This package demonstrates a source-backed memory pattern with fake fixtures. It is not a snapshot of a live memory system.
+
 `agent-memory-starter` helps design a durable, source-backed memory layer for AI agents.
 
 It is for teams and builders who want memory that is auditable and testable, not a private pile of raw chat logs.

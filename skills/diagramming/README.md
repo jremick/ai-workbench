@@ -1,5 +1,7 @@
 # Diagramming
 
+> **Status: Curated public projection.** This package keeps a generic Mermaid and D2 workflow and intentionally excludes private design-system material.
+
 `diagramming` helps choose and produce the right text-defined diagram for the destination.
 
 It is intentionally neutral: no private brand theme, no work-specific palette, and no local rendering assumptions.

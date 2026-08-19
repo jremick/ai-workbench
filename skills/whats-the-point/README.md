@@ -1,5 +1,7 @@
 # What's The Point
 
+> **Status: Curated public projection.** This package keeps the portable distillation workflow while excluding private examples and refinements.
+
 `whats-the-point` is a skill for turning dense source material into decision-ready signal.
 
 It is not a generic summarizer. It is optimized for finding the claim, ask, risk, tradeoff, uncertainty, and next action inside noisy text.

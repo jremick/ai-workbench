@@ -1,5 +1,7 @@
 # Model Council And Deep Research
 
+> **Status: Historical and illustrative.** The council method, diagrams, fixtures, and dry-run tools remain useful, but provider routes, aliases, and standalone-skill placement are not asserted current.
+
 This package adds two skills plus a deterministic runner.
 
 ## Skills

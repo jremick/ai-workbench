@@ -1,6 +1,6 @@
 # Contributing
 
-AI Workbench is a public working collection. Contributions should improve reusable patterns, public-safe examples, docs clarity, or verification coverage.
+AI Workbench is a curated public-alpha collection. Contributions should improve reusable patterns, public-safe examples, documentation clarity, lifecycle accuracy, or verification coverage.
 
 ## Good Contributions
 
@@ -26,9 +26,20 @@ Use fake fixture data and generic names when an example needs realism.
 Keep pull requests narrow:
 
 1. Explain the artifact or workflow you are changing.
-2. State whether the change affects public safety, installability, or verification.
-3. Run the relevant local check when one exists.
-4. Include before/after context for docs rewrites.
+2. State whether the change affects publication class, public safety, structural compatibility, or verification.
+3. Update `catalog/artifacts.json` when lifecycle, version, relationship, or validation evidence changes.
+4. Regenerate `docs/skills.md` with `python3 scripts/render_public_catalog.py`.
+5. Run the default checks and the relevant package-specific checks.
+6. Include before/after context for documentation rewrites.
+
+Run the default public-repository checks:
+
+```bash
+python3 scripts/validate_public_catalog.py
+python3 scripts/render_public_catalog.py --check
+python3 scripts/check_markdown_links.py
+python3 scripts/check_public_boundaries.py
+```
 
 For the model-council package, run:
 
@@ -42,4 +53,6 @@ For the model-manager package, run:
 python3 scripts/validate_model_manager_package.py
 ```
 
-If no check exists for the changed area, say that in the PR.
+The deterministic-controls, agent-memory, and war-council packages also have focused checks documented in their READMEs.
+
+Validation has bounded claims. Structural checks do not prove usefulness, security, output quality, or compatibility with every host. If no behavioral or independent check exists for the changed area, say that in the pull request.

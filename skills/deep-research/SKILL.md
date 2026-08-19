@@ -1,8 +1,7 @@
 ---
 name: deep-research
 description: Use for source-backed research that needs current facts, citation discipline, uncertainty tracking, competing explanations, or a decision-ready synthesis. This skill structures research into source collection, evidence extraction, uncertainty handling, and model-council escalation when claims need independent model review.
-version: 1.0.0
-last_updated: 2026-06-15
+license: Apache-2.0
 ---
 
 # Deep Research

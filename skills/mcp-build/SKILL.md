@@ -1,9 +1,7 @@
 ---
 name: mcp-build
 description: Use when building, reviewing, deploying, or extending Model Context Protocol servers, especially TypeScript MCP servers, stdio transports, Streamable HTTP transports, remote MCP servers, hosted agent platforms, or tools that expose external systems to AI clients. Emphasize schemas, narrow tools, auth boundaries, smoke tests, and direct-access risk review.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # MCP Build

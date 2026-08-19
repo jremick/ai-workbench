@@ -1,5 +1,7 @@
 # Harness-First Project Coach
 
+> **Status: Current public snapshot.** This package is structurally current in AI Workbench; a newer working variant may exist, so the version and comparison date remain explicit in the catalog.
+
 `harness-first-project-coach` helps an agent clarify a substantial project before implementation.
 
 It sits one step before `project-harness-designer`: first it asks whether the goal is framed correctly, which facts and constraints matter, which support skills should be used, and what minimum operating harness is worth designing.

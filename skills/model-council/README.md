@@ -1,5 +1,7 @@
 # Model Council
 
+> **Status: Superseded public snapshot.** The council method and runner remain illustrative, but the provider routes and aliases below are historical and must not be treated as current operational configuration.
+
 `model-council` runs independent model workers and a separate synthesis pass.
 
 It is useful for difficult decisions, research synthesis, high-risk claims, and benchmark comparisons where a single model answer is not enough evidence.
@@ -12,15 +14,15 @@ It is useful for difficult decisions, research synthesis, high-risk claims, and 
 - provides a Vercel AI Gateway config as an API alternate option
 - records prompts, command arrays, raw logs, model outputs, and synthesis output
 
-## Install
+## Historical package layout
 
-Copy this directory into your agent skill directory:
+The retained standalone package uses this layout:
 
 ```text
 skills/model-council/
 ```
 
-The minimum install is `SKILL.md`. Keep `references/` when you want the full workflow notes.
+Study `SKILL.md` with `references/` for the method. Verify provider and host routes independently before any execution.
 
 ## Runner
 

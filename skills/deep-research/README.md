@@ -1,5 +1,7 @@
 # Deep Research
 
+> **Status: Superseded public snapshot.** The research method remains useful, but its standalone routing model is historical. New architectures should route research by source, provider, risk, and synthesis needs.
+
 `deep-research` is a skill for source-backed research and decision-ready synthesis.
 
 It structures research into source collection, evidence extraction, uncertainty handling, and synthesis.
@@ -12,15 +14,15 @@ It structures research into source collection, evidence extraction, uncertainty 
 - tracks evidence, conflicts, uncertainty, and confidence
 - escalates hard synthesis to `model-council`
 
-## Install
+## Historical package layout
 
-Copy this directory into your agent skill directory:
+The retained standalone package uses this layout:
 
 ```text
 skills/deep-research/
 ```
 
-The minimum install is `SKILL.md`. Keep `references/` when you want the source quality guidance.
+Study `SKILL.md` with `references/` for the source-quality method. Prefer a current research router for operational use.
 
 ## Try It
 
