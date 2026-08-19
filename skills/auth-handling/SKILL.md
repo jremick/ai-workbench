@@ -1,9 +1,7 @@
 ---
 name: auth-handling
-description: Use when a task needs local authentication routing, API token loading, secret references, project environment files, password-manager CLI use, keychain-backed secret access, service account setup, or troubleshooting repeated auth prompts. Choose the least-exposure path by ownership: project-defined helpers first for project workflows, reusable local secret caches for repeated agent commands, and explicit user confirmation before creating new durable auth storage.
-version: 1.1.0
-last_updated: 2026-06-04
-status: public-ready
+description: "Use when a task needs local authentication routing, API token loading, secret references, project environment files, password-manager CLI use, keychain-backed secret access, service account setup, or troubleshooting repeated auth prompts. Choose the least-exposure path by ownership: project-defined helpers first for project workflows, reusable local secret caches for repeated agent commands, and explicit user confirmation before creating new durable auth storage."
+license: Apache-2.0
 ---
 
 # Auth Handling

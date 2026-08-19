@@ -1,5 +1,7 @@
 # Harness Composer
 
+> **Status: Superseded public snapshot.** This standalone decomposition pattern is retained for reference. New work should combine project-harness design with delivery-specific verification.
+
 `harness-composer` helps an agent turn a broad project into a parent harness and a small set of child harnesses.
 
 It is useful when a normal plan would hide too much complexity: public artifact packaging, multi-agent work, research plus implementation, eval-heavy projects, or nested agentic workflows.
@@ -12,15 +14,15 @@ This skill produces a parent harness and child harness map: purpose, inputs, out
 
 It does not execute the child harnesses, spawn agents, run tests, or publish artifacts. The calling agent still owns execution, integration, and final verification.
 
-## Install
+## Historical package layout
 
-Copy this directory into your agent skill directory:
+The retained standalone package uses this layout:
 
 ```text
 skills/harness-composer/
 ```
 
-The minimum install is `SKILL.md`. Keep `evals/cases.json` when you want example test prompts.
+Study `SKILL.md` with `evals/cases.json` for example prompts. Prefer the successor direction above for new projects.
 
 ## Try It
 

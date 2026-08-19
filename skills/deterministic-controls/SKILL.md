@@ -1,9 +1,7 @@
 ---
 name: deterministic-controls
 description: Identify when agent, harness, skill, workflow, or AI system behavior needs deterministic controls instead of model judgment, and recommend production-grade implementation approaches. Use when designing, reviewing, or hardening agentic workflows, tool harnesses, skills, evals, routing, parsing, validation, permissions, retries, state machines, audit logs, CI gates, policy enforcement, or AI reliability controls.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Deterministic Controls

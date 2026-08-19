@@ -1,5 +1,7 @@
 # Deterministic Controls
 
+> **Status: Curated public projection.** The package and documented cases are public-safe; its self-authored eval is structural evidence, not independent behavioral acceptance.
+
 `deterministic-controls` helps decide what should be enforced by code, schemas, state machines, policy gates, tests, and evals instead of model wording.
 
 It is for serious agent and AI workflow design: tool permissions, routing, structured output, retries, side effects, auditability, release gates, and safety boundaries.

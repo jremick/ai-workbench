@@ -1,5 +1,7 @@
 # War Council
 
+> **Status: Current public snapshot.** The instruction body matched its working counterpart on 2026-08-19; public frontmatter was normalized afterward, so exact parity is not claimed.
+
 `war-council` is a decision harness for uncomfortable tradeoffs.
 
 It turns advisor personas into an auditable workflow: define the decision, build an evidence register, score options with a weighted rubric, force each persona to allocate a $100 war chest, and synthesize the result into a decision ledger.

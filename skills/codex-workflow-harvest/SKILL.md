@@ -1,9 +1,7 @@
 ---
 name: codex-workflow-harvest
 description: Review recent agent work, memory summaries, rollout notes, repeated failures, and workflow friction to decide which lessons should become durable skills, instructions, helper scripts, automations, or follow-up work. Use when a team wants to convert repeated agent operating lessons into reusable workflow improvements without publishing private logs or bloating global instructions.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Codex Workflow Harvest

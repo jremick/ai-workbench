@@ -1,5 +1,7 @@
 # Codex Config Sync Workflow
 
+> **Historical example:** This document preserves the live-home versus versioned-mirror pattern, but its commands and file layout predate the current profile/router architecture. Review every copy or `rsync --delete` target and current Codex documentation before use. Never sync this public repository directly from a private live home or configuration mirror.
+
 Version: 0.1.0
 Last updated: 2026-06-04
 

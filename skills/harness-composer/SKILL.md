@@ -1,9 +1,7 @@
 ---
 name: harness-composer
 description: Use when a user starts, reviews, or rescopes a complex agentic project that needs multiple nested harnesses, workstreams, sub-agents, eval loops, or public artifact tracks. This skill composes a parent harness and child harnesses with clear dependencies, success evidence, integration gates, model-role choices, and stop conditions before execution begins.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Harness Composer

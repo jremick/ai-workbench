@@ -1,5 +1,7 @@
 # Verification Harness Router
 
+> **Status: Superseded public snapshot.** The evidence-routing pattern remains useful, but new architectures should place it within engineering delivery and QA or verification routes.
+
 `verification-harness-router` helps agents choose the right proof path for a claim.
 
 It is useful when "looks good" is not enough: public artifact packaging, launch readiness, skill evals, UI verification, code changes, live-system checks, and sub-agent review.
@@ -12,15 +14,15 @@ This skill routes a claim to the smallest credible evidence path: tests, evals, 
 
 It does not implement every verifier, replace test code, or treat model review as proof. It names the route and the minimum evidence needed before a completion claim is credible.
 
-## Install
+## Historical package layout
 
-Copy this directory into your agent skill directory:
+The retained standalone package uses this layout:
 
 ```text
 skills/verification-harness-router/
 ```
 
-The minimum install is `SKILL.md`. Keep `evals/cases.json` for example prompts.
+Study `SKILL.md` with `evals/cases.json` for example prompts. Prefer current delivery and QA routes for execution.
 
 ## Try It
 

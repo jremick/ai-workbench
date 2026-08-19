@@ -1,5 +1,7 @@
 # Codex Workflow Harvest
 
+> **Status: Curated public projection.** This is a vendor-neutral public workflow, not a copy of private memory, task history, or operating logs.
+
 `codex-workflow-harvest` is an improvement-loop skill for agent work.
 
 It helps turn repeated failures, user corrections, and workflow friction into durable skills, instructions, helper scripts, automations, or follow-up work.

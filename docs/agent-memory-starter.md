@@ -1,5 +1,7 @@
 # Agent Memory Starter
 
+> **Status: Illustrative public example.** The fixture and retrieval checks demonstrate a bounded pattern; they do not prove semantic search quality or represent a live memory system.
+
 Version: 1.0.0
 Last updated: 2026-06-04
 

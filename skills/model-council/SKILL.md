@@ -1,8 +1,7 @@
 ---
 name: model-council
 description: Use when a task needs multiple independent model perspectives, sidecar model review, adversarial synthesis, benchmarkable ensemble reasoning, or comparison against a Fusion-style multi-model answer. This skill defines a deterministic council workflow with explicit worker roles, isolated prompts, structured outputs, a separate synthesizer, and verifiable routing through local CLIs or Vercel AI Gateway.
-version: 1.0.0
-last_updated: 2026-06-15
+license: Apache-2.0
 ---
 
 # Model Council

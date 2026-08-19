@@ -1,9 +1,7 @@
 ---
 name: whats-the-point
 description: Use when the user wants to evaluate information, documents, proposals, updates, strategy notes, research, or jargon-heavy writing and distill the real point into plain-language, decision-ready signal while preserving accuracy, nuance, uncertainty, and the ability to expand detail incrementally.
-version: 1.1.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # What's The Point

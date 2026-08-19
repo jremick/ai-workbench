@@ -1,5 +1,7 @@
 # MCP Build
 
+> **Status: Curated public projection.** Review current MCP, SDK, transport, authentication, and hosting documentation before operational use; the public package is not a live routing snapshot.
+
 `mcp-build` is a practical skill for building and reviewing Model Context Protocol servers.
 
 It focuses on the surfaces that most often break in real MCP projects: SDK/version drift, transport choice, schemas, tool boundaries, auth, direct route protection, smoke tests, and documentation.

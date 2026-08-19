@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -14,6 +17,18 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      - name: Validate public catalog and skill structure
+        run: python3 scripts/validate_public_catalog.py
+
+      - name: Verify generated public catalog
+        run: python3 scripts/render_public_catalog.py --check
+
+      - name: Check local Markdown links
+        run: python3 scripts/check_markdown_links.py
+
+      - name: Check public boundaries
+        run: python3 scripts/check_public_boundaries.py
 
       - name: Validate model council package
         run: python3 scripts/validate_model_council_package.py
@@ -25,3 +40,9 @@ jobs:
         run: |
           cd skills/deterministic-controls
           python3 scripts/run_evals.py
+
+      - name: Run agent memory fixture eval
+        run: python3 tools/agent-memory-starter/scripts/run_fixture_eval.py
+
+      - name: Run war council self-test
+        run: python3 skills/war-council/scripts/war_council.py self-test

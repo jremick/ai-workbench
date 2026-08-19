@@ -1,9 +1,7 @@
 ---
 name: model-manager
 description: "Use when a non-trivial Codex task may benefit from explicit model delegation, role-stack routing, cost-aware model selection, benchmark-informed settings, or routing through Claude, Perplexity, LM Studio, Vercel AI Gateway, or another non-default provider."
-version: 0.2.0
-last_updated: 2026-06-16
-status: public-alpha
+license: Apache-2.0
 ---
 
 # Model Manager

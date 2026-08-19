@@ -1,5 +1,7 @@
 # Project Harness Designer
 
+> **Status: Curated public projection.** This package publishes the reusable harness method and does not claim exact parity with a private or newer working version.
+
 `project-harness-designer` helps an agent start substantial projects with the right operating structure before execution.
 
 It is useful when a user gives a goal like "set up this repo", "build a tool", "create a framework", "research this deeply", or "make this public-ready" and the agent needs to define success evidence, risks, and the first execution path.

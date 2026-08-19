@@ -1,9 +1,7 @@
 ---
 name: verification-harness-router
-description: Use when an agent needs to prove a claim, choose tests or evals, verify a public artifact, validate a workflow, check launch readiness, or decide what evidence is enough. This skill routes work to the smallest credible verification harness: tests, evals, smoke checks, screenshots, read-backs, diff review, secret scan, sidecar critique, or user review.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+description: "Use when an agent needs to prove a claim, choose tests or evals, verify a public artifact, validate a workflow, check launch readiness, or decide what evidence is enough. This skill routes work to the smallest credible verification harness: tests, evals, smoke checks, screenshots, read-backs, diff review, secret scan, sidecar critique, or user review."
+license: Apache-2.0
 ---
 
 # Verification Harness Router

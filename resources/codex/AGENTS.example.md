@@ -1,5 +1,7 @@
 # Global Agent Instructions
 
+> **Historical example:** This file is a dated public template, not the maintainer's current global instructions and not an official OpenAI default. Adapt it to the current host, permissions, and project context.
+
 Version: 0.1.0
 Last updated: 2026-06-04
 Purpose: Cross-project coding-agent defaults that should hold across machines and repos.

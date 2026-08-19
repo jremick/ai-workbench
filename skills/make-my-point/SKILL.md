@@ -1,9 +1,7 @@
 ---
 name: make-my-point
 description: Use when the user wants to improve, simplify, sharpen, restructure, or rewrite their own writing, documents, messages, updates, proposals, memos, presentations, or communications so the point, story arc, ask, evidence, examples, and influence path are clearer, more persuasive, more concise, and still accurate.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Make My Point

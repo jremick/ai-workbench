@@ -1,9 +1,7 @@
 ---
 name: agent-memory-starter
 description: Use when designing, reviewing, or bootstrapping a source-backed memory layer for AI agents. Focus on durable facts, provenance, retrieval quality, privacy boundaries, update proposals, and eval-backed search rather than raw transcript storage.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Agent Memory Starter

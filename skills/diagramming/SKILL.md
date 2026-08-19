@@ -1,9 +1,7 @@
 ---
 name: diagramming
 description: Create, iterate, and polish diagrams using a pragmatic text-first workflow. Use when the user asks for a diagram, workflow, process map, architecture diagram, sequence diagram, system landscape, operating model, or visual explanation, especially when you need to choose between Mermaid for fast docs-native iteration and D2 for polished exported assets.
-version: 1.0.0
-last_updated: 2026-06-04
-status: public-ready
+license: Apache-2.0
 ---
 
 # Diagramming

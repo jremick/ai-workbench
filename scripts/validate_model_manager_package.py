@@ -90,9 +90,12 @@ def check_skill_metadata(errors: list[str]) -> None:
     if metadata.get("status") != "public-alpha":
         errors.append("skill.json status must be public-alpha")
 
-    skill = (PACKAGE / "SKILL.md").read_text(encoding="utf-8")
-    if "status: public-alpha" not in skill:
-        errors.append("SKILL.md must declare status: public-alpha")
+    catalog = json.loads((ROOT / "catalog" / "artifacts.json").read_text(encoding="utf-8"))
+    entry = next((item for item in catalog["artifacts"] if item["id"] == "model-manager"), None)
+    if entry is None:
+        errors.append("catalog/artifacts.json must include model-manager")
+    elif entry.get("publication_class") != "curated-projection":
+        errors.append("model-manager catalog publication_class must be curated-projection")
 
 
 def check_recommendation_values(errors: list[str]) -> None:

@@ -1,5 +1,7 @@
 # Context Boundary Designer
 
+> **Status: Superseded public snapshot.** The standalone skill is retained as a historical pattern. New architectures should place context boundaries in host instructions, profile policy, and router-level controls.
+
 `context-boundary-designer` helps agents decide what context belongs in parent prompts, child agents, sidecar models, memory, docs, evals, and public artifacts.
 
 It is useful when context is powerful but risky: nested agents, long-running tasks, public packaging, memory design, or any workflow that touches private source material.
@@ -12,15 +14,15 @@ This skill classifies context by sensitivity, stability, provenance, and destina
 
 It does not spawn agents, run sidecar models, write memory, publish artifacts, or verify final outputs. It defines boundaries that the parent agent must apply.
 
-## Install
+## Historical package layout
 
-Copy this directory into your agent skill directory:
+The retained standalone package uses this layout:
 
 ```text
 skills/context-boundary-designer/
 ```
 
-The minimum install is `SKILL.md`. Keep `evals/cases.json` for example prompts.
+Study `SKILL.md` with `evals/cases.json` for example prompts. Prefer the successor direction above for new architecture.
 
 ## Try It
 

@@ -1,5 +1,7 @@
 # Auth Handling
 
+> **Status: Curated public projection.** This package publishes ownership-first auth principles without private helpers, account routes, secret references, or a live-parity claim.
+
 `auth-handling` is a safety skill for local credentials, secret references, project env files, 1Password or other password-manager CLIs, keychain-backed caches, and service accounts.
 
 It is intentionally pattern-focused. It does not ship private helper scripts, secret names, local keychain services, or machine-specific hooks.
@@ -36,8 +38,9 @@ Use auth-handling to design a deterministic policy that prevents agents from rea
 
 ## Included Patterns
 
-- 1Password as the human-owned secret source of truth.
-- Keychain or platform secure-store cache for approved repeated local agent commands.
+- Existing environment variables and project helpers before creating another auth path.
+- Keychain or platform secure-store helpers for approved repeated local agent commands.
+- 1Password only for explicit warmup, import, rotation, or scoped one-command injection.
 - Strict runtime helpers that read environment variables or secure store entries, then fail loud on cache miss.
 - Deterministic gates that block model-visible reads of real `.env` files and commands that would dump them.
 - Presence-only auth checks that return required names, present names, and missing names without values.
