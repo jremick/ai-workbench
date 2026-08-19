@@ -1,0 +1,23 @@
+{
+  "skill_name": "html-print-pdf",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "This HTML slide deck only prints the currently visible slide. Add browser print-to-PDF support so every slide prints on its own landscape page and the controls are hidden.",
+      "expected_output": "Print CSS reveals all slides, sets landscape zero-margin pages, hides controls with page-specific selectors, and includes a verification checklist.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Make this static HTML report printable as an A4 PDF. It has sticky navigation, scrollable sections, and dark mode styles.",
+      "expected_output": "Print CSS uses A4 portrait margins, hides navigation, prevents scroll clipping, handles color adjustment or print-specific colors, and verifies the PDF output.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Add a PDF button to this dashboard, but keep the printed output focused on the data tables and charts.",
+      "expected_output": "Adds a no-print button wired to window.print(), hides dashboard controls in print, preserves wide layout in landscape, and avoids hiding printable button-like content too broadly.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "repository_status": "public-alpha",
+  "reference_only": true,
+  "last_reviewed": "2026-08-20",
+  "source_boundary": "This catalog describes synthetic public architecture artifacts only. It is not generated from a live Codex home, profile resolution, provider cache, or private configuration mirror.",
+  "official_behavior_reviewed": [
+    {
+      "topic": "skills and progressive disclosure",
+      "url": "https://developers.openai.com/codex/skills",
+      "reviewed": "2026-08-20"
+    },
+    {
+      "topic": "plugin distribution",
+      "url": "https://developers.openai.com/codex/build-plugins",
+      "reviewed": "2026-08-20"
+    },
+    {
+      "topic": "AGENTS.md instruction layering",
+      "url": "https://developers.openai.com/codex/guides/agents-md",
+      "reviewed": "2026-08-20"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "router-registry-schema",
+      "title": "Router registry schema",
+      "kind": "schema",
+      "path": "architecture/schema/router-registry-v1.schema.json",
+      "publication_class": "synthetic-reference",
+      "distribution_status": "repo-reference",
+      "validation_evidence": ["structural"],
+      "provenance": {
+        "relationship": "independent-public",
+        "upstream": null,
+        "source_revision": null
+      },
+      "claim_limits": ["The schema is a reference contract, not an OpenAI product schema."],
+      "last_reviewed": "2026-08-20"
+    },
+    {
+      "id": "minimal-router-registry",
+      "title": "Minimal synthetic router registry",
+      "kind": "example",
+      "path": "architecture/examples/minimal-registry.json",
+      "publication_class": "synthetic-reference",
+      "distribution_status": "repo-reference",
+      "validation_evidence": ["structural", "generated-consistency"],
+      "provenance": {
+        "relationship": "independent-public",
+        "upstream": null,
+        "source_revision": null
+      },
+      "claim_limits": ["Names, routes, skills, and profiles are fictional and do not reconstruct a maintainer environment."],
+      "last_reviewed": "2026-08-20"
+    },
+    {
+      "id": "generated-route-map",
+      "title": "Generated synthetic route map",
+      "kind": "generated-example",
+      "path": "architecture/examples/generated-route-map.md",
+      "publication_class": "synthetic-reference",
+      "distribution_status": "repo-reference",
+      "validation_evidence": ["generated-consistency"],
+      "provenance": {
+        "relationship": "generated-from-public-fixture",
+        "upstream": "architecture/examples/minimal-registry.json",
+        "source_revision": "repository-tree"
+      },
+      "claim_limits": ["The route map describes only the synthetic registry committed here."],
+      "last_reviewed": "2026-08-20"
+    },
+    {
+      "id": "profile-resolution-example",
+      "title": "Synthetic profile resolution",
+      "kind": "example",
+      "path": "architecture/examples/profile-resolution.json",
+      "publication_class": "illustrative-only",
+      "distribution_status": "repo-reference",
+      "validation_evidence": ["structural"],
+      "provenance": {
+        "relationship": "independent-public",
+        "upstream": null,
+        "source_revision": null
+      },
+      "claim_limits": ["This is illustrative output, not a current runtime profile or resolver result."],
+      "last_reviewed": "2026-08-20"
+    },
+    {
+      "id": "six-router-template-set",
+      "title": "Six synthetic router templates",
+      "kind": "template-set",
+      "path": "architecture/examples/routers",
+      "publication_class": "synthetic-reference",
+      "distribution_status": "repo-reference",
+      "validation_evidence": ["structural"],
+      "provenance": {
+        "relationship": "independent-public",
+        "upstream": null,
+        "source_revision": null
+      },
+      "claim_limits": ["The six domains are Jarel Remick's public reference pattern, not official Codex categories."],
+      "last_reviewed": "2026-08-20"
+    },
+    {
+      "id": "reference-architecture-evals",
+      "title": "Reference architecture structural contracts",
+      "kind": "eval-set",
+      "path": "architecture/evals",
+      "publication_class": "synthetic-reference",
+      "distribution_status": "repo-reference",
+      "validation_evidence": ["structural", "synthetic-negative-contracts"],
+      "provenance": {
+        "relationship": "independent-public",
+        "upstream": null,
+        "source_revision": null
+      },
+      "claim_limits": ["Structural cases do not prove routing quality, runtime activation, or compatibility with a reader's host."],
+      "last_reviewed": "2026-08-20"
+    }
+  ]
+}

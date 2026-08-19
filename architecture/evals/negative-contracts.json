@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "reference_only": true,
+  "mutations": [
+    {
+      "id": "wrong-schema-version",
+      "operation": "set",
+      "path": "schema_version",
+      "value": 99,
+      "expected_error": "schema_version must be 1"
+    },
+    {
+      "id": "not-reference-only",
+      "operation": "set",
+      "path": "reference_only",
+      "value": false,
+      "expected_error": "reference_only must be true"
+    },
+    {
+      "id": "duplicate-router",
+      "operation": "duplicate",
+      "collection": "routers",
+      "index": 0,
+      "expected_error": "duplicate router id"
+    },
+    {
+      "id": "duplicate-skill",
+      "operation": "duplicate",
+      "collection": "skills",
+      "index": 0,
+      "expected_error": "duplicate skill id"
+    },
+    {
+      "id": "unknown-route-target",
+      "operation": "set",
+      "path": "routers.0.routes.0.target",
+      "value": "missing-skill",
+      "expected_error": "unknown target"
+    },
+    {
+      "id": "invalid-owner",
+      "operation": "set",
+      "path": "skills.0.ownership",
+      "value": "secret-profile",
+      "expected_error": "invalid ownership"
+    },
+    {
+      "id": "invalid-awareness",
+      "operation": "set",
+      "path": "skills.0.awareness",
+      "value": "always-injected",
+      "expected_error": "invalid awareness"
+    },
+    {
+      "id": "empty-route-intent",
+      "operation": "set",
+      "path": "routers.0.routes.0.intent",
+      "value": "",
+      "expected_error": "route intent must be non-empty"
+    },
+    {
+      "id": "profile-unknown-skill",
+      "operation": "set",
+      "path": "profiles.0.enabled_skills.0",
+      "value": "missing-skill",
+      "expected_error": "profile enables unknown skill"
+    }
+  ]
+}

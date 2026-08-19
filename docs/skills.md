@@ -17,7 +17,10 @@ AI Workbench is a curated public collection, not a mirror of a maintainer's live
 
 | Skill | Public version | Relationship | Validation | Replacement or note |
 | --- | --- | --- | --- | --- |
-| [Harness-First Project Coach](../skills/harness-first-project-coach/README.md) | 1.1.2 | dated-public-snapshot | skill-structure | Structurally current public snapshot; the maintainer's live version was slightly newer at comparison time. |
+| [ADHD Helper](../skills/adhd-helper/README.md) | 1.0.0 | dated-public-snapshot | skill-structure | Workflow scaffold, not medical advice; no clinical or universal-effectiveness claim. |
+| [HTML Artifacts](../skills/html-artifacts/README.md) | 0.2.0 | dated-public-snapshot | skill-structure, template-generator-smoke | Includes Apache-2.0-attributed upstream ideas, offline templates, and deterministic helper scripts. |
+| [HTML Print PDF](../skills/html-print-pdf/README.md) | 1.0.1 | dated-public-snapshot | skill-structure, documented-eval-cases | Browser print behavior still requires rendered PDF inspection; no supported-browser matrix is claimed. |
+| [Product IA UX Redesign](../skills/product-ia-ux-redesign/README.md) | 0.1.1 | dated-public-snapshot | skill-structure, artifact-generator-smoke | Templates and review modes preserve the distinction between file-grounded, browser-verified, and inferred evidence. |
 | [War Council](../skills/war-council/README.md) | 1.0.0 | dated-public-snapshot | skill-structure, deterministic-self-test | The instruction body matched its working counterpart on 2026-08-19; public frontmatter was normalized after comparison, so exact parity is no longer claimed. |
 
 ## Curated public projections
@@ -26,11 +29,14 @@ AI Workbench is a curated public collection, not a mirror of a maintainer's live
 | --- | --- | --- | --- | --- |
 | [Auth Handling](../skills/auth-handling/README.md) | 1.1.0 | sanitized-projection | skill-structure | Public auth principles only; private helpers, account routes, and secret references are excluded. |
 | [Codex Workflow Harvest](../skills/codex-workflow-harvest/README.md) | 1.0.0 | sanitized-projection | skill-structure | Vendor-neutral public workflow; it is not a copy of private memory or operating logs. |
+| [Decision Log](../skills/decision-log/README.md) | 1.1.0 | sanitized-projection | skill-structure | Tracker, memory-system, and private global-path assumptions are removed from the public edition. |
 | [Deterministic Controls](../skills/deterministic-controls/README.md) | 1.0.0 | sanitized-projection | skill-structure, docs-mode-eval | The bundled eval checks documented cases; it is not independent behavioral acceptance. |
 | [Diagramming](../skills/diagramming/README.md) | 1.0.0 | sanitized-projection | skill-structure | Generic Mermaid and D2 workflow; private design-system material is intentionally excluded. |
+| [Harness-First Project Coach](../skills/harness-first-project-coach/README.md) | 1.1.2 | sanitized-projection | skill-structure | Sanitized public version; the newer working counterpart contains environment-specific support metadata and is not a public source. |
 | [Make My Point](../skills/make-my-point/README.md) | 1.0.0 | sanitized-projection | skill-structure | Portable public writing workflow; private examples and voice overlays are excluded. |
 | [MCP Build](../skills/mcp-build/README.md) | 1.0.0 | sanitized-projection | skill-structure | Review current MCP and authentication documentation before operational use. |
 | [Model Manager](../skills/model-manager/README.md) | 0.2.0 | sanitized-projection | skill-structure, package-validator, unit-tests | Model and benchmark data are dated inputs, not evergreen provider recommendations. |
+| [Peek Context Map](../skills/peek-context-map/README.md) | 0.1.0 | sanitized-projection | skill-structure, helper-smoke | No private context maps are included; generated maps may contain source paths and require separate disclosure review. |
 | [Project Harness Designer](../skills/project-harness-designer/README.md) | 0.4.0 | sanitized-projection | skill-structure | Public projection of the harness method; it is not exact live parity. |
 | [What's The Point](../skills/whats-the-point/README.md) | 1.1.0 | sanitized-projection | skill-structure | Portable public distillation workflow; private examples and refinements are excluded. |
 

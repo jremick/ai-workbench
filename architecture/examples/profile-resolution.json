@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "reference_only": true,
+  "profile": "reviewer",
+  "source": "architecture/examples/minimal-registry.json",
+  "enabled_routers": [
+    "agent-operations",
+    "knowledge-communication",
+    "artifact-production",
+    "engineering-delivery",
+    "connected-systems",
+    "tooling-platforms"
+  ],
+  "enabled_skills": [
+    "decision-journal",
+    "evidence-brief",
+    "accessible-report",
+    "repo-readiness"
+  ],
+  "unavailable_skills": [
+    {
+      "id": "tracker-triage",
+      "reason": "work ownership is unavailable to the reviewer profile"
+    },
+    {
+      "id": "provider-selector",
+      "reason": "personal ownership is unavailable to the reviewer profile"
+    }
+  ],
+  "claim_limit": "Illustrative output only. This file is not generated from a live Codex profile."
+}
