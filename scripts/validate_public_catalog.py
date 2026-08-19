@@ -6,7 +6,7 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 
@@ -122,7 +122,10 @@ def valid_iso_date(value: object) -> bool:
         parsed = date.fromisoformat(value)
     except ValueError:
         return False
-    return parsed <= date.today()
+    # A review performed just after local midnight can still be "tomorrow" on
+    # a UTC-hosted CI runner. Allow one calendar day of timezone skew while
+    # rejecting materially future-dated metadata.
+    return parsed <= date.today() + timedelta(days=1)
 
 
 def main() -> int:
