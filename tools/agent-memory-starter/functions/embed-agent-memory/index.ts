@@ -109,13 +109,6 @@ function vectorLiteral(values: number[], dimensions: number): string {
   return `[${values.join(",")}]`;
 }
 
-function safeError(error: unknown): string {
-  const message = error instanceof Error ? error.message : String(error);
-  return message
-    .replace(/Bearer\s+[A-Za-z0-9._-]+/g, "Bearer [redacted]")
-    .replace(/sk-[A-Za-z0-9_-]{20,}/g, "[redacted-api-key]");
-}
-
 async function createEmbeddings(input: string[]): Promise<number[][]> {
   const apiKey = requireEnv("OPENAI_API_KEY");
   const model = embeddingModel();
@@ -286,7 +279,7 @@ Deno.serve(async (request: Request) => {
         if (error || updated !== true) {
           failures.push({
             chunk_id: chunk.chunk_id,
-            error: error ? error.message : "chunk changed before embedding could be stored",
+            error: error ? "Failed to store embedding" : "chunk changed before embedding could be stored",
           });
         }
       }
@@ -301,7 +294,7 @@ Deno.serve(async (request: Request) => {
     }
 
     return jsonResponse({ error: "Unsupported mode" }, 400);
-  } catch (error) {
-    return jsonResponse({ error: safeError(error) }, 500);
+  } catch {
+    return jsonResponse({ error: "Internal server error" }, 500);
   }
 });
